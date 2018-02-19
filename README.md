@@ -10,4 +10,4 @@ Test: to see if commit works properly.
 
 Test2: Kwok Sun test
 
-Test3: ZC
+Test3: ZC.
