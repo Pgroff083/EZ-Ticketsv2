@@ -1,16 +1,23 @@
 package com.example;
 
-import java.io.IOException;
+import java.io.*;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.activation.*;
+
 
 public class Registration extends HttpServlet {
    private static final long serialVersionUID = 1L;
@@ -21,9 +28,23 @@ public class Registration extends HttpServlet {
    static String query = null;
    Statement statement = null;
    static Boolean same = false;
+   
+   private String host;
+   private String port;
+   private String muser;
+   private String pass;
 
    public Registration() {
       super();
+   }
+   
+   public void init() {
+       // reads SMTP server setting from web.xml file
+       ServletContext context = getServletContext();
+       host = context.getInitParameter("host");
+       port = context.getInitParameter("port");
+       muser = context.getInitParameter("user");
+       pass = context.getInitParameter("pass");
    }
 
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -94,9 +115,26 @@ public class Registration extends HttpServlet {
 		  {
 			 query = "INSERT INTO infoTable (FIRSTNAME, LASTNAME, LOGINID, PASSWORD, EMAIL) VALUES ('" + firstname + "','"
 					  + lastName + "','" + loginID + "','" + password + "','" + email + "');";			  
-			  executeQuery(query);
-			  request.setAttribute("successfulMessage", "Thanks for registration. You are our member now.");
-			  request.getRequestDispatcher("/input.jsp").forward(request, response);			  
+			  executeQuery(query);			  
+			  	
+		        String subject = "Registration Confirmation";
+		        String content = "Welcome to EZTickets.";
+		 
+		        String resultMessage = "";
+		 
+		        try {
+		            EmailUtility.sendEmail(host, port, muser, pass, email, subject,
+		                    content);
+		            resultMessage = "Thanks for registration. You are our member now.";
+		        } catch (Exception ex) {
+		            ex.printStackTrace();
+		            resultMessage = "There were an error: " + ex.getMessage();
+		        } finally {
+		        	request.setAttribute("successfulMessage", resultMessage);			  
+					  request.getRequestDispatcher("/input.jsp").forward(request, response);
+		        }
+		        
+			  			  
 		  }	   
    }
 
@@ -108,6 +146,11 @@ public class Registration extends HttpServlet {
 	   catch (SQLException e) {		 
 		   e.printStackTrace();		 
 	   }	
+   }
+   
+   private void email() 
+   {
+	  
    }
    
    
