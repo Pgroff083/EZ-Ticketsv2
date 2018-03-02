@@ -6,6 +6,6 @@ This is a brief description of the group project by G-Triple-C:
 
 The goal of this project is to develop a web application using HTML 5 and JavaScript along with a MySQL controled database stored on an Amazon AWS EC2 server that runs Unbuntu.
 
-Test: to see if commit works properly.
+Pull before edit anything!
 
-Test2: Kwok Sun test
+The template file contains navbar and footer as standard elements of the website.
