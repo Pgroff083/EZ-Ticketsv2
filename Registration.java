@@ -1,23 +1,16 @@
 package com.example;
 
-import java.io.*;
+import java.io.IOException;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import java.util.*;
-import javax.mail.*;
-import javax.mail.internet.*;
-import javax.activation.*;
-
 
 public class Registration extends HttpServlet {
    private static final long serialVersionUID = 1L;
@@ -117,7 +110,6 @@ public class Registration extends HttpServlet {
 					  + lastName + "','" + loginID + "','" + password + "','" + email + "');";			  
 			  executeQuery(query);			  
 			  	
-			  	// Setting Email Subject and Content 
 		        String subject = "Registration Confirmation";
 		        String content = "Welcome to EZTickets.";
 		 
@@ -133,7 +125,8 @@ public class Registration extends HttpServlet {
 		        } finally {
 		        	request.setAttribute("successfulMessage", resultMessage);			  
 					  request.getRequestDispatcher("/input.jsp").forward(request, response);
-		        }	        
+		        }
+		        
 			  			  
 		  }	   
    }
@@ -146,5 +139,12 @@ public class Registration extends HttpServlet {
 	   catch (SQLException e) {		 
 		   e.printStackTrace();		 
 	   }	
-   }   
+   }
+   
+   private void email() 
+   {
+	  
+   }
+   
+   
 }
