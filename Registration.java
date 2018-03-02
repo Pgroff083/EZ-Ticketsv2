@@ -117,6 +117,7 @@ public class Registration extends HttpServlet {
 					  + lastName + "','" + loginID + "','" + password + "','" + email + "');";			  
 			  executeQuery(query);			  
 			  	
+			  	// Setting Email Subject and Content 
 		        String subject = "Registration Confirmation";
 		        String content = "Welcome to EZTickets.";
 		 
@@ -132,8 +133,7 @@ public class Registration extends HttpServlet {
 		        } finally {
 		        	request.setAttribute("successfulMessage", resultMessage);			  
 					  request.getRequestDispatcher("/input.jsp").forward(request, response);
-		        }
-		        
+		        }	        
 			  			  
 		  }	   
    }
@@ -146,12 +146,5 @@ public class Registration extends HttpServlet {
 	   catch (SQLException e) {		 
 		   e.printStackTrace();		 
 	   }	
-   }
-   
-   private void email() 
-   {
-	  
-   }
-   
-   
+   }   
 }
