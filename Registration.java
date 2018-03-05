@@ -140,11 +140,6 @@ public class Registration extends HttpServlet {
 		   e.printStackTrace();		 
 	   }	
    }
-   
-   private void email() 
-   {
-	  
-   }
-   
+
    
 }
