@@ -1,0 +1,31 @@
+diff a/Registration.java b/Registration.java	(rejected hunks)
+@@ -115,9 +115,26 @@
+ 		  {
+ 			 query = "INSERT INTO infoTable (FIRSTNAME, LASTNAME, LOGINID, PASSWORD, EMAIL) VALUES ('" + firstname + "','"
+ 					  + lastName + "','" + loginID + "','" + password + "','" + email + "');";			  
+-			  executeQuery(query);
+-			  request.setAttribute("successfulMessage", "Thanks for registration. You are our member now.");
+-			  request.getRequestDispatcher("/input.jsp").forward(request, response);			  
++			  executeQuery(query);			  
++			  	
++		        String subject = "Registration Confirmation";
++		        String content = "Welcome to EZTickets.";
++		 
++		        String resultMessage = "";
++		 
++		        try {
++		            EmailUtility.sendEmail(host, port, muser, pass, email, subject,
++		                    content);
++		            resultMessage = "Thanks for registration. You are our member now.";
++		        } catch (Exception ex) {
++		            ex.printStackTrace();
++		            resultMessage = "There were an error: " + ex.getMessage();
++		        } finally {
++		        	request.setAttribute("successfulMessage", resultMessage);			  
++					  request.getRequestDispatcher("/input.jsp").forward(request, response);
++		        }
++		        
++			  			  
+ 		  }	   
+    }
+ 
