@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/graphics/freepik.jpg">
+
+    <title>EZ-Tickets</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Josefin+Slab:100,600|Playfair+Display+SC" rel="stylesheet">
+    <!-- for card text -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="album.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index_style.css">
+
+  </head>
+
+  <body>
+
+    <!-- <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <strong>Album</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header> -->
+
+
+        <div id="navBar_style" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow customize-font">
+          <a class="p-2 text-white my-0 mr-md-auto font-weight-normal customize-EZTicket" href="./index.html"><h5 class="my-0 mr-md-auto font-weight-normal">EZ - Tickets</h5></a>
+
+          <div class="input-group navbar-searchinput">
+            <input type="text" class="form-control nav-input-search" placeholder="Enter Movie Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary nav-btn-search" type="button"><i class="material-icons search-icon">search</i></button>
+            </div>
+          </div>
+
+
+          <nav class="my-2 my-md-0 mr-md-3 nav-customized-font">
+
+            <!-- <a class="p-2 text-dark" href="#">Features</a> -->
+            <a class="p-2 text-white" href="#">Movie</a>
+            <a class="p-2 text-white" href="./checkout.html">Checkout</a>
+            <a class="p-2 text-white dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            <!-- <div class="p-2 dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div> -->
+
+
+
+            <!-- ////////popup login section///// -->
+                <button type="button" class="btn btn-primary cutomize_sign_btn after-login-loginbtn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log In</button>
+                <!-- <i class="material-icons" style="display: none">account_box</i> -->
+                <div class="modal fade customize-font" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="login" method="POST">
+                          <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Email:</label>
+                            <input type="text" class="form-control" id="recipient-name" name="email">
+                          </div>
+                          <div class="form-group">
+                            <label for="message-text" class="col-form-label">Password:</label>
+                            <input type = "text" class="form-control pwd" id="message-text" name="password">
+                          </div>
+                          <div class="modal-footer">
+                          	<button type="submit" class="btn btn-primary final-login-btn">Log In</button>
+                        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                        	
+                      	  </div>
+                        </form>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+          	</nav>
+          <a class="btn btn-outline-primary button_signup after-login-signupbtn" href="Registration.html">Sign up</a>
+        </div>
+
+
+    <main role="main">
+
+      <!-- <section class="jumbotron text-center customize-font">
+        <div class="container jumbotron-container">
+          <h1 class="jumbotron-heading h1_bg">EZ <br>-<br> Tickets</h1>
+          <p id="jumbtext" class="lead text-muted">"Watch Movie & Buy Ticket".</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2 cutomize_button">See Movie</a>
+            <a href="#" class="btn btn-secondary my-2 button_signup">Buy Ticket</a>
+          </p>
+        </div>
+
+      </section> -->
+
+
+      <!-- image slide -->
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <!-- <h1 class="h1-on-slide">E Z - Ticket </h1> -->
+        <!-- <button class="button-on-slide" type="button" name="button">button test</button> -->
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+
+            <img class="d-block w-100" src="graphics/superman.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="graphics/superman2.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="graphics/blackpanther.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- image slide -->
+
+      <!--======== WELCOME ========-->
+      <!-- <p class="intro-paragrapg">Welcome to our webpage<br>view the newest movie and buy tickets.</p> -->
+      <!--======== WELCOME ========-->
+
+      <div class="album py-5 bg-light customize-font customize-album">
+
+        <div class="container customize-album-container">
+          <div class="container">
+            <p class="intro-paragrapg">Welcome to our webpage<br>view the newest movie and buy tickets.</p>
+              <h1 class="front-page-head">E-Z Tickets</h1>
+              <p class="front-page-paragraph">testCheck out candid photos of the 2018 Academy
+                Award nominees during the making of their movies. Join our IMDb LIVE Viewing Party
+                f their movies. Join our IMDb LIVE Viewing Party a</p>
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-8">
+              <div class="discription">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="discription_pic" src="graphics/intro_pic.jpg" alt="no pic">
+                    </div>
+                    <div class="col-md-8">
+                      <h3 class="discription-head">Neon Genesis Evangelion</h3>
+                      <p class="discription-paragraph">testCheck out candid photos of the 2018 Academy Award nominees during the making of their movies. Join our IMDb LIVE Viewing Party at 7:30 p.m. ET/4:30 p.m. PT Sunday, March 4Check out candid photos of the 2018 Academy Award nominees during the making of their movies. Join our IMDb LIVE Viewing Party Check out candid photos of the 2018 Academy Award nominees during the making of their movies. Join our IMDb LIVE Viewing Party at 7:30 p.m. ET/4:30 p.m. PT Sunday, March 4Check out candid photos of the 2018 Academy Award nominees during the making of their movies. Join our IMDb LIVE Viewing Party at 7:30 p.m. ET/4:30 p.m. PT Sunday, March 4at 7:30 p.m. ET/4:30 p.m. PT Sunday, March 4</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="row card-group1 col-md-12">
+                  <div class="col-md-3 movie-card">
+                    <div class="card mb-3 box-shadow">
+                      <!-- <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> -->
+                      <img class="card-img-top cardimg-custom" src="graphics/view1.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text"><span class="movie-card-title">Blade runner</span><br> DD/MM/YY</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group-card">
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">View</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Edit</button>
+                          </div>
+                          <!-- <small class="text-muted">9 mins</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 movie-card">
+                    <div class="card mb-4 box-shadow">
+                      <!-- <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> -->
+                      <img class="card-img-top cardimg-custom" src="graphics/view2.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group-card">
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">View</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Edit</button>
+                          </div>
+                          <!-- <small class="text-muted">9 mins</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 movie-card">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top cardimg-custom" src="graphics/view3.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group-card">
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">View</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Edit</button>
+                          </div>
+                          <!-- <small class="text-muted">9 mins</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 movie-card">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top cardimg-custom" src="graphics/view4.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group-card">
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">View</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Edit</button>
+                          </div>
+                          <!-- <small class="text-muted">9 mins</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row card-group2 col-md-12">
+                  <div class="col-md-3 movie-card">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top cardimg-custom" src="graphics/cardimg.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group-card">
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">View</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Edit</button>
+                          </div>
+                          <!-- <small class="text-muted">9 mins</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 movie-card">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top cardimg-custom" src="graphics/cardimg.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group-card">
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">View</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Edit</button>
+                          </div>
+                          <!-- <small class="text-muted">9 mins</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 movie-card">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top cardimg-custom" src="graphics/cardimg.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group-card">
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">View</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Edit</button>
+                          </div>
+                          <!-- <small class="text-muted">9 mins</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 movie-card">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top cardimg-custom" src="graphics/cardimg.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group-card">
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">View</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Edit</button>
+                          </div>
+                          <!-- <small class="text-muted">9 mins</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <!-- <div class="col-md-3 movie-card">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top cardimg-custom" src="graphics/cardimg1.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group-card"> -->
+                            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">View</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Edit</button>
+                          </div> -->
+                          <!-- <small class="text-muted">9 mins</small> -->
+                        <!-- </div>
+                      </div>
+                    </div>
+                  </div> -->
+
+
+
+              </div>
+            </div>
+
+          <!-- ========= side bar ========= -->
+          <div class="col-md-4 front-sidebar">
+            <div>
+              <h3 class="trailer-title">Black Panther</h3>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xjDjIWPwcPU" allowfullscreen></iframe>
+              </div>
+              <p class="sidebar-discription">
+                Check out candid photos of the 2018 Academy Award nominees during the making of their movies. Join our IMDb LIVE Viewing Party at 7:30 p.m. ET/4:30 p.m. PT Sunday, March 4.
+              </p>
+
+              <br>
+              <div>
+                <table class="table table-dark table-customize">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Movie Name</th>
+                      <th scope="col">Rating</th>
+                      <!-- <th scope="col">Handle</th> -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Blade Runner</td>
+                      <td>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                      </td>
+                      <!-- <td>@mdo</td> -->
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Black Panther</td>
+                      <td>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                      </td>
+                      <!-- <td>@fat</td> -->
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Lady Bird</td>
+                      <td>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                      </td>
+                      <!-- <td>@twitter</td> -->
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="sidebar-theater-button-div">
+                <button type="button" class="btn btn-primary cutomize_sidebar_btn">
+                  Get Ticket and Show Time
+                </button>
+              </div>
+
+            </div>
+          </div>
+          <!-- ========= side bar ========= -->
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+<!--
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer> -->
+
+
+          <!--Footer-->
+          <footer class="page-footer font-small stylish-color-dark pt-4 mt-4 footer-costumize">
+
+              <!--Footer Links-->
+              <div class="container text-center text-md-left">
+                  <div class="row">
+
+                      <!--First column-->
+                      <div class="col-md-4">
+                          <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Footer Content</h5>
+                          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
+                              amet, consectetur adipisicing elit.</p>
+                      </div>
+                      <!--/.First column-->
+
+                      <hr class="clearfix w-100 d-md-none">
+
+                      <!--Second column-->
+                      <!-- <div class="col-md-2 mx-auto">
+                          <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
+                          <ul class="list-unstyled">
+                              <li><a href="#!">Link 1</a></li>
+                              <li><a href="#!">Link 2</a></li>
+                              <li><a href="#!">Link 3</a></li>
+                              <li><a href="#!">Link 4</a></li>
+                          </ul>
+                      </div> -->
+                      <!--/.Second column-->
+
+                      <hr class="clearfix w-100 d-md-none">
+
+                      <!--Third column-->
+                      <!-- <div class="col-md-2 mx-auto">
+                          <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
+                          <ul class="list-unstyled">
+                              <li><a href="#!">Link 1</a></li>
+                              <li><a href="#!">Link 2</a></li>
+                              <li><a href="#!">Link 3</a></li>
+                              <li><a href="#!">Link 4</a></li>
+                          </ul>
+                      </div> -->
+                      <!--/.Third column-->
+
+                      <hr class="clearfix w-100 d-md-none">
+                      <div class="col-md-2">
+
+                      </div>
+                      <!--Fourth column-->
+                      <div class="col-md-2 mx-auto">
+                          <h5 class="text-uppercase mb-4 mt-3 font-weight-bold ">Links</h5>
+                          <ul class="list-unstyled">
+                              <li><a href="#!">Movie</a></li>
+                              <li><a href="./checkout.html">Checkout</a></li>
+                              <li><a href="#!">About</a></li>
+                              <!-- <li><a href="#!"></a></li> -->
+                          </ul>
+                      </div>
+                      <!--/.Fourth column-->
+
+                      <div class="col-md-4 text-center py-3">
+                          <ul class="list-unstyled list-inline mb-0">
+                              <li class="list-inline-item">
+                                  <h5 class="mb-1">Register for free</h5>
+                              </li>
+                              <li class="list-inline-item"><a href="Registration.html" class="btn btn-danger btn-rounded">Sign up!</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <!--/.Footer Links-->
+
+
+              <!--Call to action-->
+              <!-- <div class="text-center py-3">
+                  <ul class="list-unstyled list-inline mb-0">
+                      <li class="list-inline-item">
+                          <h5 class="mb-1">Register for free</h5>
+                      </li>
+                      <li class="list-inline-item"><a href="#!" class="btn btn-danger btn-rounded">Sign up!</a></li>
+                  </ul>
+              </div> -->
+              <!--/.Call to action-->
+
+              <hr>
+
+              <!--Social buttons-->
+              <div class="text-center">
+                  <ul class="list-unstyled list-inline">
+                      <li class="list-inline-item"><a class="btn-floating btn-sm btn-fb mx-1"><i class="fa fa-facebook"> </i></a></li>
+                      <li class="list-inline-item"><a class="btn-floating btn-sm btn-tw mx-1"><i class="fa fa-twitter"> </i></a></li>
+                      <li class="list-inline-item"><a class="btn-floating btn-sm btn-gplus mx-1"><i class="fa fa-google-plus"> </i></a></li>
+                      <li class="list-inline-item"><a class="btn-floating btn-sm btn-li mx-1"><i class="fa fa-linkedin"> </i></a></li>
+                      <li class="list-inline-item"><a class="btn-floating btn-sm btn-dribbble mx-1"><i class="fa fa-dribbble"> </i></a></li>
+                  </ul>
+              </div>
+              <!--/.Social buttons-->
+
+              <!--Copyright-->
+              <div class="footer-copyright py-3 text-center">
+                  <div class="container-fluid">
+                      © 2017 Copyright: <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
+                  </div>
+              </div>
+              <!--/.Copyright-->
+
+          </footer>
+          <!--/.Footer-->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/script.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
