@@ -1,0 +1,147 @@
+/*
+button color(orange, a little bit brighter): #F0B54C
+button color(orange, a little bit darker): #F0A13E
+button hover color(light purple): #9765AE
+
+navbar standard font type: font-family: 'Playfair Display SC', serif;
+navbar signup/login button font type: font-family: 'Lora', serif;
+
+footer backgroun-color: #626275;
+*/
+
+
+
+#navBar_style {
+  background-color: #000000 !important;
+  /* -webkit-box-shadow: 0 8px 6px -6px #181821;
+       -moz-box-shadow: 0 8px 6px -6px #181821;
+            box-shadow: 0 8px 6px -6px #181821;*/
+  margin-bottom: 0 !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.customize-EZTicket {
+  /* padding: 0 !important; */
+  /* padding-left: 10px; */
+  /* border-left: 1px solid yellow; */
+  /* border-right: 1px solid white; */
+  /* border: 1px solid #F0B54C; */
+  margin-right: 20px !important;
+}
+
+
+.nav-bar-customize-font {
+  background-color: black;
+  font-family: 'Playfair Display SC', serif;
+  font-style: Regular;
+}
+
+.cutomize_sign_btn {
+  font-family: 'Lora', serif;
+  padding: 4px 2px 4px 2px;
+  text-align: center;
+  margin-right: 1px;
+  background-color: #F0B54C;
+  border-color: #F0B54C;
+}
+
+.cutomize_sign_btn:hover {
+    background-color: #9765AE;
+    border-color: #9765AE;
+}
+
+.button_signup {
+  font-family: 'Lora', serif;
+  padding: 4px 2px 4px 2px;
+  background-color: white;
+  border-color: #F0A13E;
+  color: #F0A13E;
+}
+
+.button_signup:hover {
+    background-color: #9765AE;
+    border-color: #9765AE;
+}
+
+.navbar-searchinput {
+  max-width: 340px;
+  margin-right: auto;
+}
+
+.nav-input-search {
+  border: 0;
+  max-height: 30px;
+}
+
+.nav-btn-search {
+  background-color: #6C648B;
+  border: 0;
+  max-height: 30px;
+  opacity: .9;
+}
+
+.search-icon {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #F0B54C;
+    font-size: 1em;
+}
+
+.nav-customized-font {
+  /* font-family: 'Josefin Slab:100', serif; */
+   margin-right: 5px !important; 
+}
+
+.text-white {
+  color: #F2F9F9 !important;
+}
+
+.text-white:hover {
+  color: #F0B54C !important;
+}
+
+.user_login_icon {
+  color: white;
+  font-size: 2em;
+}
+
+/* ------------------------CSS nav bar------------------------*/
+
+
+.cutomize_submit_btn {
+  font-family: 'Lora', serif;
+  padding: 4px 2px 4px 2px;
+  text-align: center;
+  margin-right: 1px;
+  background-color: #F0B54C;
+  border-color: #F0B54C;
+}
+
+
+.cutomize_submit_btn:hover {
+    background-color: #9765AE;
+    border-color: #9765AE;
+}
+
+
+.cutomize_cancel_btn {
+  font-family: 'Lora', serif;
+  padding: 4px 2px 4px 2px;
+  background-color: white;
+  border-color: #F0A13E;
+  color: #F0A13E;
+}
+
+.cutomize_cancel_btn:hover {
+    background-color: #9765AE;
+    border-color: #9765AE;
+}
+
+/* ------------------------CSS footer------------------------*/
+.page-footer {
+  background-color: #626275 !important;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
