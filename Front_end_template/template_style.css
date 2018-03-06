@@ -12,12 +12,13 @@ footer backgroun-color: #626275;
 
 
 #navBar_style {
-  background-color: #6F2232 !important;
+  background-color: #000000 !important;
   /* -webkit-box-shadow: 0 8px 6px -6px #181821;
        -moz-box-shadow: 0 8px 6px -6px #181821;
-            box-shadow: 0 8px 6px -6px #181821; */
+            box-shadow: 0 8px 6px -6px #181821;*/
   margin-bottom: 0 !important;
   padding-top: 5px !important;
+  padding-bottom: 5px !important;
 }
 
 .customize-EZTicket {
@@ -74,7 +75,7 @@ footer backgroun-color: #626275;
 }
 
 .nav-btn-search {
-  background-color: white;
+  background-color: #6C648B;
   border: 0;
   max-height: 30px;
   opacity: .9;
@@ -100,15 +101,42 @@ footer backgroun-color: #626275;
   color: #F0B54C !important;
 }
 
+.user_login_icon {
+  color: white;
+  font-size: 2em;
+}
+
 /* ------------------------CSS nav bar------------------------*/
 
 
+.cutomize_submit_btn {
+  font-family: 'Lora', serif;
+  padding: 4px 2px 4px 2px;
+  text-align: center;
+  margin-right: 1px;
+  background-color: #F0B54C;
+  border-color: #F0B54C;
+}
 
 
+.cutomize_submit_btn:hover {
+    background-color: #9765AE;
+    border-color: #9765AE;
+}
 
 
+.cutomize_cancel_btn {
+  font-family: 'Lora', serif;
+  padding: 4px 2px 4px 2px;
+  background-color: white;
+  border-color: #F0A13E;
+  color: #F0A13E;
+}
 
-
+.cutomize_cancel_btn:hover {
+    background-color: #9765AE;
+    border-color: #9765AE;
+}
 
 /* ------------------------CSS footer------------------------*/
 .page-footer {

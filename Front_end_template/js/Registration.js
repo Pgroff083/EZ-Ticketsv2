@@ -28,4 +28,9 @@ $(document).ready(function()  {
       // Link back to homepage here
     }
   });
+
+  $(".final-login-btn").click(function() {
+    $(".after-login-loginbtn").replaceWith('<i class="material-icons user_login_icon">account_box</i>');
+    $(".after-login-signupbtn").replaceWith("");
+  })
 })
