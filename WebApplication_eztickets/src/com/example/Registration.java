@@ -104,8 +104,21 @@ public class Registration extends HttpServlet {
 		  if(same == true) 
 		  {
 			  same = false;
-			  request.setAttribute("errorMessage", "This email has been registered. Please enter again.");
-			  request.getRequestDispatcher("/input.jsp").forward(request, response);			  
+			  //request.setAttribute("errorMessage", "This email has been registered. Please enter again.");
+			  //request.getRequestDispatcher("/input.jsp").forward(request, response);
+			  try {
+			      response.setContentType("text/html");
+			      PrintWriter writer = response.getWriter();
+			      writer.println("<html><body>");
+			      writer.println("This email has been registered.");
+			      String newURL = response.encodeURL("Registration.html");
+			     writer.println(
+			        "Please click <a href=\"" + newURL + "\">here</a> to try again.");
+			     writer.println("</body></html>");
+			     writer.close();
+			    } catch (Exception e) {
+			      e.printStackTrace();
+			 }
 		  }
 		  else 
 		  {
