@@ -1,5 +1,8 @@
 $(document).ready(function() {
-
+  
+	// The next line is a call to the ratings.js file that handles the rating system
+	var r = new SimpleStarRating(document.getElementById('rating_1'));
+	
   $(".ratting-star").click(function() {
     this.replaceWith('star');
   });

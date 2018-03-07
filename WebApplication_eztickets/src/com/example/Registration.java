@@ -111,7 +111,7 @@ public class Registration extends HttpServlet {
 		  {
 			 query = "INSERT INTO infoTable (FIRSTNAME, LASTNAME, LOGINID, PASSWORD, EMAIL) VALUES ('" + firstname + "','"
 					  + lastName + "','" + loginID + "','" + password + "','" + email + "');";			  
-			  executeQuery(query);			  
+			  	executeQuery(query);			  
 			  	
 			  	// Setting Email Subject and Content 
 		        String subject = "Registration Successful!";
@@ -133,8 +133,21 @@ public class Registration extends HttpServlet {
 		            ex.printStackTrace();
 		            resultMessage = "There were an error: " + ex.getMessage();
 		        } finally {
-		        	request.setAttribute("successfulMessage", resultMessage);			  
-					  request.getRequestDispatcher("/index.html").forward(request, response);
+		        	//request.setAttribute("successfulMessage", resultMessage);			  
+					//request.getRequestDispatcher("/index.html").forward(request, response);
+		        	 try {
+					      response.setContentType("text/html");
+					      PrintWriter writer = response.getWriter();
+					      writer.println("<html><body>");
+					      writer.println(resultMessage);
+					      String newURL = response.encodeURL("index.html");
+					     writer.println(
+					        "Click <a href=\"" + newURL + "\">here</a> back to home page");
+					     writer.println("</body></html>");
+					     writer.close();
+					    } catch (Exception e) {
+					      e.printStackTrace();
+					 }
 		        }	        
 			  			  
 		  }	   

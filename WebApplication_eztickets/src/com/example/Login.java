@@ -1,6 +1,7 @@
 package com.example;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -91,13 +92,41 @@ public class Login extends HttpServlet {
 		  if(login == true) 
 		  {
 			  login = false;			  
-			  request.setAttribute("successfulMessage", "Welcome! " + loginID);
-			  request.getRequestDispatcher("/lindex.html").forward(request, response);			  
+			  //request.setAttribute("successfulMessage", "Welcome! " + loginID);
+			  //request.getRequestDispatcher("/login.jsp").forward(request, response);
+			  try {
+			      response.setContentType("text/html");
+			      PrintWriter writer = response.getWriter();
+			      writer.println("<html><body>");
+			      writer.println(
+			       "Thank you, " + loginID + ". You are now logged into the system");
+			      String newURL = response.encodeURL("index.html");
+			     writer.println(
+			        "Click <a href=\"" + newURL + "\">here</a> back to home page");
+			     writer.println("</body></html>");
+			     writer.close();
+			    } catch (Exception e) {
+			      e.printStackTrace();
+			    }
 		  }
 		  else 
 		  {
-			  request.setAttribute("errorMessage", "Email or password is invalid. Please enter again." + loginID + password);
-			  request.getRequestDispatcher("/index.html").forward(request, response);			  
+			  //request.setAttribute("errorMessage", "Email or password is invalid. Please enter again." + loginID + password);
+			  //request.getRequestDispatcher("/login.jsp").forward(request, response);
+			  try {
+			      response.setContentType("text/html");
+			      PrintWriter writer = response.getWriter();
+			      writer.println("<html><body>");
+			      writer.println(
+			       "Email or password is invalid.");
+			      String newURL = response.encodeURL("index.html");
+			     writer.println(
+			        "Please Click <a href=\"" + newURL + "\">here</a> try again.");
+			     writer.println("</body></html>");
+			     writer.close();
+			    } catch (Exception e) {
+			      e.printStackTrace();
+			    }
 		  }	   
    }  
    
