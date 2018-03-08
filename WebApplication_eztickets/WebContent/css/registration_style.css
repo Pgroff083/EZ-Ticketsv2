@@ -31,6 +31,12 @@ footer backgroun-color: #626275;
 }
 
 
+.customize-font {
+  background-color: black;
+  font-family: 'Playfair Display SC', serif;
+  font-style: Regular;
+}
+
 .nav-bar-customize-font {
   background-color: black;
   font-family: 'Playfair Display SC', serif;

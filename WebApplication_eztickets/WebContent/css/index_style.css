@@ -349,6 +349,20 @@ h1 {
   color: black;
 }
 
+/*.table td, .table th{
+  padding: 0 !important;
+  vertical-align: !important;
+}*/
+
+.wrapper {
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}
+
+.text-space {
+  padding-bottom: 0 !important;
+}
+
 .customize-font {
   background-color: black;
   font-family: 'Playfair Display SC', serif;

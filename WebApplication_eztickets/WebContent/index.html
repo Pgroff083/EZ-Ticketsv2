@@ -2,7 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+<!--     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/rating.css">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/graphics/freepik.jpg">
@@ -21,9 +27,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="album.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/index_style.css">
     <link rel="stylesheet" type="text/css" href="css/SimpleStarRating.css">
-
+    <link rel="stylesheet" type="text/css" href="css/index_style.css">
   </head>
 
   <body>
@@ -77,7 +82,7 @@
 
             <!-- <a class="p-2 text-dark" href="#">Features</a> -->
             <a class="p-2 text-white" href="#">Movie</a>
-            <a class="p-2 text-white" href="checkout.html">Checkout</a>
+            <a class="p-2 text-white" href="./other_page/checkout.html">Checkout</a>
             <a class="p-2 text-white dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Action</a>
@@ -113,15 +118,15 @@
                         <form action="login" method="POST">
                           <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Email:</label>
-                            <input type="text" class="form-control" id="recipient-name" name="email">
+                            <input type="text" class="form-control" id="recipient-name">
                           </div>
                           <div class="form-group">
                             <label for="message-text" class="col-form-label">Password:</label>
-                            <input type="password" class="form-control" id="message-text" name="password">
+                            <input type="password" class="form-control" id="message-text">
                           </div>
                           <div class="modal-footer">                        	
-                        	<button type="submit" class="btn btn-primary final-login-btn">Log In</button>
-                        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        	<button type="button" class="btn btn-primary final-login-btn">Log In</button>
+                        	<button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       		</div>
                         </form>
                       </div>
@@ -130,7 +135,7 @@
                   </div>
                 </div>
           </nav>
-          <a class="btn btn-outline-primary button_signup after-login-signupbtn" href="Registration.html">Sign up</a>
+          <a class="btn btn-outline-primary button_signup after-login-signupbtn" href="./other_page/Registration.html">Sign up</a>
         </div>
 
 
@@ -182,7 +187,9 @@
 
       <div class="album py-5 bg-light customize-font customize-album">
 
-              <p class="intro-paragrapg">Welcome to our webpage<br>view the newest movies and buy tickets.</p>
+        <div class="container customize-album-container">
+          <div class="container">
+            <p class="intro-paragrapg">Welcome to our webpage<br>view the newest movies and buy tickets.</p>
               <h1 class="front-page-head">EZ-Tickets</h1>
               <p class="front-page-paragraph">EZ-Tickets is a web application that allows you to search for movies
               in theaters around Omaha. Our website also allows you to view movie trailers as well as leave a
@@ -201,8 +208,9 @@
                     </div>
                     <div class="col-md-8">
                       <h3 class="discription-head">Neon Genesis Evangelion</h3>
-                                            <p class="discription-paragraph">Here we will show one of the featured movies of the week, similar to what twould show up at the top of the page. In the future we may also expand this part of the webpage
+                        <p class="discription-paragraph">Here we will show one of the featured movies of the week, similar to what twould show up at the top of the page. In the future we may also expand this part of the webpage
                         to include the other features of a movie "cell" such as rating and movie trailer previews</p>
+
                     </div>
                   </div>
                 </div>
@@ -213,9 +221,9 @@
                   <div class="col-md-3 movie-card">
                     <div class="card mb-3 box-shadow">
                       <!-- <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> -->
-                      <img class="card-img-top cardimg-custom" src="graphics/view1.jpg" alt="Card image cap">
+                      <img class="card-img-top cardimg-custom" src="graphics/poster/blade runner.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text"><span class="movie-card-title">Blade runner</span><br> DD/MM/YY</p>
+                        <p class="card-text"><span class="movie-card-title">Blade runner</span><br> 02/11/2017</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group-card">
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -231,9 +239,9 @@
                   <div class="col-md-3 movie-card">
                     <div class="card mb-4 box-shadow">
                       <!-- <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> -->
-                      <img class="card-img-top cardimg-custom" src="graphics/view2.jpg" alt="Card image cap">
+                      <img class="card-img-top cardimg-custom" src="graphics/poster/Avatar.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <p class="card-text"><span class="movie-card-title">Avatar</span><br> 21/02/2014</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group-card">
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -248,9 +256,9 @@
                   </div>
                   <div class="col-md-3 movie-card">
                     <div class="card mb-4 box-shadow">
-                      <img class="card-img-top cardimg-custom" src="graphics/view3.jpg" alt="Card image cap">
+                      <img class="card-img-top cardimg-custom" src="graphics/poster/deadpool.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <p class="card-text"><span class="movie-card-title">Dead Pool</span><br> 21/03/2017</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group-card">
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -266,9 +274,9 @@
 
                   <div class="col-md-3 movie-card">
                     <div class="card mb-4 box-shadow">
-                      <img class="card-img-top cardimg-custom" src="graphics/view4.jpg" alt="Card image cap">
+                      <img class="card-img-top cardimg-custom" src="graphics/poster/enemy.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <p class="card-text"><span class="movie-card-title">Enemy</span><br> 16/07/2016</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group-card">
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -286,9 +294,9 @@
                 <div class="row card-group2 col-md-12">
                   <div class="col-md-3 movie-card">
                     <div class="card mb-4 box-shadow">
-                      <img class="card-img-top cardimg-custom" src="graphics/cardimg.jpg" alt="Card image cap">
+                      <img class="card-img-top cardimg-custom" src="graphics/poster/iron_man.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <p class="card-text"><span class="movie-card-title">Iron Man</span><br> 23/06/2014</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group-card">
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -304,9 +312,9 @@
 
                   <div class="col-md-3 movie-card">
                     <div class="card mb-4 box-shadow">
-                      <img class="card-img-top cardimg-custom" src="graphics/cardimg.jpg" alt="Card image cap">
+                      <img class="card-img-top cardimg-custom" src="graphics/poster/justice_league.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <p class="card-text"><span class="movie-card-title">Justice League</span><br> 18/07/2017</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group-card">
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -322,9 +330,9 @@
 
                   <div class="col-md-3 movie-card">
                     <div class="card mb-4 box-shadow">
-                      <img class="card-img-top cardimg-custom" src="graphics/cardimg.jpg" alt="Card image cap">
+                      <img class="card-img-top cardimg-custom" src="graphics/poster/the_martian.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <p class="card-text"><span class="movie-card-title">The Martian</span><br> 28/06/2017</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group-card">
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -340,9 +348,9 @@
 
                   <div class="col-md-3 movie-card">
                     <div class="card mb-4 box-shadow">
-                      <img class="card-img-top cardimg-custom" src="graphics/cardimg.jpg" alt="Card image cap">
+                      <img class="card-img-top cardimg-custom" src="graphics/poster/the_dark_knight.jpg" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text"><span class="movie-card-title">Title</span><br> DD/MM/YY</p>
+                        <p class="card-text"><span class="movie-card-title">The Dark Knight</span><br> 29/5/2001</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group-card">
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -405,9 +413,20 @@
                   <tbody>
                     <tr>
                       <th scope="row">1</th>
-                      <td>Blade Runner</td>
+                      <td class="text-space">Blade Runner</td>
                       <td>
-                        <span id="rating_1" class="rating" data-default-rating="2.5" data-stars="5" enabled></span>
+                        <div class="wrapper">
+                          <input type="checkbox" id="st1" value="1" />
+                          <label for="st1"></label>
+                          <input type="checkbox" id="st2" value="2" />
+                          <label for="st2"></label>
+                          <input type="checkbox" id="st3" value="3" />
+                          <label for="st3"></label>
+                          <input type="checkbox" id="st4" value="4" />
+                          <label for="st4"></label>
+                          <input type="checkbox" id="st5" value="5" />
+                          <label for="st5"></label>
+                        </div>
                         <!-- <i class="material-icons"><span class="ratting-star">star_border</span></i>
                         <i class="material-icons"><span class="ratting-star">star_border</span></i>
                         <i class="material-icons"><span class="ratting-star">star_border</span></i>
@@ -418,25 +437,52 @@
                     </tr>
                     <tr>
                       <th scope="row">2</th>
-                      <td>Black Panther</td>
+                      <td class="text-space">Black Panther</td>
                       <td>
+                        <div class="wrapper">
+                          <input type="checkbox" id="st1" value="1" />
+                          <label for="st1"></label>
+                          <input type="checkbox" id="st2" value="2" />
+                          <label for="st2"></label>
+                          <input type="checkbox" id="st3" value="3" />
+                          <label for="st3"></label>
+                          <input type="checkbox" id="st4" value="4" />
+                          <label for="st4"></label>
+                          <input type="checkbox" id="st5" value="5" />
+                          <label for="st5"></label>
+                        </div>
+                        <!-- <div class="wrapper">
+                          <input type="checkbox" id="st1" value="1" />
+                            <label for="st1"></label>
+                        </div>
                         <i class="material-icons"><span class="ratting-star">star_border</span></i>
                         <i class="material-icons"><span class="ratting-star">star_border</span></i>
                         <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i> -->
                       </td>
                       <!-- <td>@fat</td> -->
                     </tr>
                     <tr>
                       <th scope="row">3</th>
-                      <td>Lady Bird</td>
+                      <td class="text-space">Lady Bird</td>
                       <td>
+                        <!-- <i class="material-icons"><span class="ratting-star">star_border</span></i>
                         <i class="material-icons"><span class="ratting-star">star_border</span></i>
                         <i class="material-icons"><span class="ratting-star">star_border</span></i>
                         <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
+                        <i class="material-icons"><span class="ratting-star">star_border</span></i> -->
+                        <div class="wrapper">
+                          <input type="checkbox" id="st1" value="1" />
+                          <label for="st1"></label>
+                          <input type="checkbox" id="st2" value="2" />
+                          <label for="st2"></label>
+                          <input type="checkbox" id="st3" value="3" />
+                          <label for="st3"></label>
+                          <input type="checkbox" id="st4" value="4" />
+                          <label for="st4"></label>
+                          <input type="checkbox" id="st5" value="5" />
+                          <label for="st5"></label>
+                        </div>
                       </td>
                       <!-- <td>@twitter</td> -->
                     </tr>
@@ -487,6 +533,7 @@
                       <div class="col-md-4">
                           <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">EZ-Tickets</h5>
                           <p>The simple, fast, and convenient way to search for and purchase tickets to your favorite movies!</p>
+
                       </div>
                       <!--/.First column-->
 
@@ -527,7 +574,7 @@
                           <h5 class="text-uppercase mb-4 mt-3 font-weight-bold ">Links</h5>
                           <ul class="list-unstyled">
                               <li><a href="#!">Movie</a></li>
-                              <li><a href="./checkout.html">Checkout</a></li>
+                              <li><a href="./other_page/checkout.html">Checkout</a></li>
                               <li><a href="#!">About</a></li>
                               <!-- <li><a href="#!"></a></li> -->
                           </ul>
@@ -539,7 +586,7 @@
                               <li class="list-inline-item">
                                   <h5 class="mb-1">Register for free</h5>
                               </li>
-                              <li class="list-inline-item"><a href="Registration.html" class="btn btn-danger btn-rounded">Sign up!</a></li>
+                              <li class="list-inline-item"><a href="./other_page/Registration.html" class="btn btn-danger btn-rounded">Sign up!</a></li>
                           </ul>
                       </div>
                   </div>
@@ -595,6 +642,6 @@
     <script src="../../../../dist/js/bootstrap.min.js"></script>
     <script src="../../../../assets/js/vendor/holder.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="js/SimpleStarRating.js"></script>    
+    <script src="js/rating.js"></script>  
   </body>
 </html>
