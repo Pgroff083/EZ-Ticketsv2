@@ -24,6 +24,13 @@ Beta v1.1 - Kwok (March 16 at 15:26)
 			(where starting changing)
 			(where end of the change)
 	
-
+Beta v1.2, Zhicheng, 2 April 2018
+	In HTML file:
+	Home page's update(the html file and corresponding js file) 
+	Implemente MovieDB API to update homepage's movie card
+	Get rid of check out button from the nav-bar
+	Add button to the login popup to navigate to the registration page.
+	In JavaScript file:
+	Implement jQuery to handle login/out function and update home page's movie card information. 
 	
 

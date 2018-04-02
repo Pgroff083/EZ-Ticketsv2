@@ -165,7 +165,6 @@ public class Registration extends HttpServlet {
 			  			  
 		  }	   
    }
-
    private void executeQuery(String query) {
 	   try {
 		   statement = connection.createStatement();
