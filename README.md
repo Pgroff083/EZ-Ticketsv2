@@ -33,4 +33,14 @@ Beta v1.2, Zhicheng, 2 April 2018
 	In JavaScript file:
 	Implement jQuery to handle login/out function and update home page's movie card information. 
 	
+Beta v1.3 - Kwok (April 11 at 12:40)
+	1.	I create a class for sending email which is called sendingEmail.java
+			It contains the confirmation messages 
+	2.	organize the Java src folder (separate the example folder to client and database)
+			The client folder contains Login, Registration, EmailUtility, and sendingEmail
+			The database folder contains ReadMoviesDB, updateDatabase, and showtiime.database
+	3.	I also update the index.html
+			change the sign up button page from other/Registration.html to Registration.html
+	
+	
 

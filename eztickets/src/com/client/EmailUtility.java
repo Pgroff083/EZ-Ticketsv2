@@ -1,4 +1,4 @@
-package com.example;
+package com.client;
 
 import java.util.Date;
 import java.util.Properties;
