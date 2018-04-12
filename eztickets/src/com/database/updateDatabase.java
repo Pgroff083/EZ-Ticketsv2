@@ -3,9 +3,18 @@ package com.database;
 import java.util.*;
 import java.io.*;
 import java.sql.*;
+import java.net.*;
+
+//import org.apache.commons.io.IOUtils;
+//import org.json.*;
+import org.json.simple.*;
+import org.json.simple.parser.*;
+
+//import com.sun.javafx.scene.paint.GradientUtils.Parser;
+
 import java.nio.charset.Charset;
 
-public class updateDatabase	{
+public class updateDatabase 	{
     private static int count = 0;
     static Statement statement = null;
     static Connection connection = null;
@@ -14,7 +23,7 @@ public class updateDatabase	{
 	static String password = "gcccpassword";	
 	static String query = null;
     
-    public static void main(String [] args) {
+    public static void main(String [] args) throws IOException {
         ArrayList<String> data;
         data = new ArrayList<String>();
 	data = readFile(data);				//Read data output from scraper.pl
@@ -34,18 +43,17 @@ public class updateDatabase	{
 	//Data Order:
 	// Theater Movie DoW Date Time
 	//Days:
-	//M T W R F Sa Su
-	//1 2 3 4 5 6  7
+	//Su M T W R F Sa
+	//1  2 3 4 5 6 7 
 	//Theaters:
-	//Aksarben 1, Oakview 2, Westroads 3, TC 4, VP 5, Alamo 6, Majestic 7
-	String[] theaters = {"Aksarben Cinema", "AMC Oakview" , "AMC Westroads" , "Marcus Twin Creek", "Marcus Village Pointe", "Alamo Drafthouse" , "Marcus Majestic"};
+	//Aksarben 1, Alamo 2, Oakview 3, Westroads 4, Majestic 5, TC 6, VP 7 
+	String[] theaters = {"Aksarben Cinema", "Alamo Drafthouse", "AMC Oakview" , "AMC Westroads" , "Marcus Majestic", "Marcus Twin Creek", "Marcus Village Pointe"};
 	String[] days = {"Mon", "Tue", "Wed", "Thu" , "Fri", "Sat" , "Sun" };
 
-	
 
 	// Connect to the MySQL database
 	try {
-	    Class.forName("com.mysql.jdbc.Driver");     //Issue occurring on runtime
+	    Class.forName("com.mysql.jdbc.Driver");
 	} catch (ClassNotFoundException cnfe) {	         
 	    cnfe.printStackTrace();
 	    return;
@@ -68,7 +76,7 @@ public class updateDatabase	{
 	    System.out.println("Failed to make connection!");                 
 	}
 	//Beginning of database filling...
-	//Clearlear out old entries first
+	//Clear out old entries first
 	executeQuery("TRUNCATE Movies");
 	executeQuery("TRUNCATE Dates");
 	executeQuery("TRUNCATE Times");
@@ -76,6 +84,7 @@ public class updateDatabase	{
 	boolean same = false;
 	String test = "";
 	int ID;
+	long startTime = System.nanoTime();
 	
 	for(int z = 0; z < count; z++)	{	//For each movie showtime entry...
 	    for(int a = 0; a < 7; a++)	{	//Fill in keys for theater
@@ -89,19 +98,43 @@ public class updateDatabase	{
 	    	ResultSet rs = preparedStatement.executeQuery(selectSQL);
 	        ID = 0;
 	    	same = false;    	    	
+	    	String JSON = "";
+	    	boolean sameJSON = false;
+	    	String previousMovie = "";
 	    	
 	    	while(rs.next())	{
 	    		test = rs.getString("MoviesName");
-	    		
-		    if (test.equals(dataTable[z][1]))	{		    	
-		    	same = true;		    	
-		    	ID = rs.getInt("MoviesID");
-		    }
+	    	//System.out.println(test);
+	    		String otherTest = dataTable[z][1];
+	    		if(dataTable[z][1].contains("\'"))	{
+	    			otherTest = dataTable[z][1].replace("\\", "");
+	    		}
+    			//System.out.println(test + " " + otherTest);
+	    		if (test.equals(otherTest))	{		    	
+	    			same = true;		    	
+	    			ID = rs.getInt("MoviesID");
+	    		} else if(otherTest.contains(test))	{
+
+			    	sameJSON = true;
+			    	previousMovie = test;
+			    }
 		    
 		    
 	        }
 	    	if(same == false)	{
-	            query = "INSERT INTO Movies (MoviesName) VALUES ('" + dataTable[z][1] + "');";
+	    		if(sameJSON == true)	{
+	    			selectSQL = ("select * from Movies where MoviesName = '" + previousMovie + "';");
+	    			rs = preparedStatement.executeQuery(selectSQL);
+		            rs.next();
+		            JSON = rs.getString("JSON");
+	    		}
+	    		else	{
+	    			JSON = getJSON(dataTable[z][1]);
+	            	if(JSON.contains("\'"))	{
+		    			JSON = JSON.replace("\'", "\\'");
+		    		}
+	    		}
+	    		query = "INSERT INTO Movies (MoviesName , JSON) VALUES ('" + dataTable[z][1] + "','" + JSON +"');";
 	            executeQuery(query);
 	            selectSQL = ("select * from Movies where MoviesName = '" + dataTable[z][1] + "';");
 	            rs = preparedStatement.executeQuery(selectSQL);
@@ -168,9 +201,11 @@ public class updateDatabase	{
 	    	
 	    	
 	    	query = "INSERT INTO Main(TheaterID, MoviesID, DayID, DatesID, TimesID) VALUES (" + tableIDs[z][0] + "," +  tableIDs[z][1]+ "," + tableIDs[z][2] + "," + tableIDs[z][3] + ","  + tableIDs[z][4] + ");";
-	 	    System.out.println(query);
+	 	    //System.out.println(query);
 	 	    executeQuery(query);
 	    	
+	 	    //System.out.println("Updating Database: Entry #" + (z+1) + " of " + count);
+	 	    
 	    }catch (SQLException se)	{
 	    	System.out.println("A SQL Exception has occurred");
 	    }
@@ -178,9 +213,14 @@ public class updateDatabase	{
 	//Fill the Main table with all IDs    
 	  
 		}
- 
+	float endTime = System.nanoTime()-startTime;
+	System.out.printf("Total Runtime = %f seconds.\n" , endTime / 1000000000);
     }
 
+    
+    
+ /*******************Methods**************************************************************/
+    
     public static ArrayList<String> readFile(ArrayList<String> data)	{
 	String line = "";
 	try {
@@ -206,5 +246,66 @@ public class updateDatabase	{
  	   catch (SQLException e) {		 
  		   e.printStackTrace();		 
  	   }	
-    }   
+    }
+    
+    public static String getJSON(String movie) throws IOException	{
+    	//System.out.println("Getting JSON...");
+    	String JString = "";
+    	String query = "https://api.themoviedb.org/3/search/movie?api_key=f9e1f6d31bef16452f7887267033d960&language=en-US&query=" + changeSpaces(movie) +"&page=1&include_adult=false";
+    	JSONObject json = null;
+    	//JSONObject JMovie = null;
+    	Object id = null;
+    	try	{
+    		//Get the Search results JSON
+    		//JSONParser parser = new JSONParser();
+    		//System.out.println(query);
+    		json = readJsonFromURL(query);
+    		
+    		//Retrieve the id from the JSON
+    		JSONArray results = (JSONArray) json.get("results");
+    		Iterator<JSONObject> iterator = results.iterator();
+    		json = iterator.next();
+    		
+    		//Use the id to get the Movie Details JSON
+    		id = json.get("id");
+    		query = "https://api.themoviedb.org/3/movie/"+ id.toString() +"?api_key=f9e1f6d31bef16452f7887267033d960&language=en-US";
+    		json = readJsonFromURL(query);
+    		
+    		
+    	} catch(IOException ioe)	{
+    		System.out.println("ERROR: IO Exception");
+    		ioe.printStackTrace();
+    		//System.exit(0);
+    	} 
+    	JString = json.toString();
+    	//System.out.println(JString);
+    	return JString;		
+    }
+    
+    public static JSONObject readJsonFromURL(String url) throws IOException/*, JSONException*/ {
+    	URL address = new URL(url);
+    	InputStream is = address.openStream();
+    	JSONObject json = null;
+        
+    	try {
+        	BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+        	JSONParser parser = new JSONParser();
+        	Object obj = parser.parse(rd);
+        	json = (JSONObject) obj;
+        	return json;
+        } catch(ParseException pe)	{
+        	System.out.println("ERROR: Parse Exception");
+			System.exit(0);
+    	}finally {
+    		is.close();
+        }
+        return json;
+    }
+    
+    public static String changeSpaces(String movie)  {
+    	//Required because the API returns a HTTP 400 code is not %20 instead of spaces
+    	String s = movie.replace(" ", "%20");
+    	return s;
+    }
+    
 }

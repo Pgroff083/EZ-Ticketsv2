@@ -41,6 +41,13 @@ Beta v1.3 - Kwok (April 11 at 12:40)
 			The database folder contains ReadMoviesDB, updateDatabase, and showtiime.database
 	3.	I also update the index.html
 			change the sign up button page from other/Registration.html to Registration.html
+			
+Beta v1.4 - Noah (April 12 at 3:00)
+	1. updateDatabase now handles grabbing the JSON files for each movie and storing them in 
+		the database. It stores them as a string, a very long string, and will eventually be sent
+		off to the front-end.
+	2. showtimes.data has been updated with today's showtimes. Will continue to update until launch
+		day.
 	
 	
 
