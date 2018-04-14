@@ -48,6 +48,10 @@ Beta v1.4 - Noah (April 12 at 3:00)
 		off to the front-end.
 	2. showtimes.data has been updated with today's showtimes. Will continue to update until launch
 		day.
+		
+Beta v1.5 - Noah (April 14 at 16:15)
+	1. Newer version of ReadMoviesDB.java
+		Capable to pass a JSON object to the front-end, however, the object is having problem for the front-end to read.
 	
 	
 
