@@ -30,14 +30,14 @@
     <link rel="stylesheet" type="text/css" href="css/index_style.css">
   </head>
 
-  <body>
+  <body onload="checkCookie()">
         <div id="navBar_style" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow customize-font">
           <a class="p-2 text-white my-0 mr-md-auto font-weight-normal customize-EZTicket" href="./index.html"><h5 class="my-0 mr-md-auto font-weight-normal">EZ - Tickets</h5></a>
 
           <div class="input-group navbar-searchinput">
             <input type="text" class="form-control nav-input-search" placeholder="Enter Movie Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary nav-btn-search" type="button"><i class="material-icons search-icon">search</i></button>
+              <button class="btn btn-outline-secondary nav-btn-search" type="button"><a href="./other_page/AllMovie.html"><i class="material-icons search-icon">search</i></a></button>
             </div>
           </div>
 
@@ -76,7 +76,7 @@
                             <input type="password" class="form-control" id="passwordValue">
                           </div>
                           <div class="modal-footer">
-                          <a class="btn btn-outline-primary button_signup after-login-signupbtn" href="Registration.html">Sign up</a>
+                          <a class="btn btn-outline-primary button_signup after-login-signupbtn" href="./other_page/Registration.html">Sign up</a>
                           <!-- <button class="btn btn-primary cutomize_sign_btn popup-login-btn">Log In</button> -->
                           <input class="btn btn-primary cutomize_sign_btn popup-login-btn" type="button" name="login" value="Login" data-dismiss="modal" id="btnSubmit" />
                           <button class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -189,21 +189,39 @@
                         </div>
                         <div class="modal-body">
                           <div class="container">
-                            <div class="row">
+                            <div class="row popupUpperRow">
                               <div class="col-md-4">
                                 <img class="modal-img" src="" alt="not pic">
                               </div>
                               <div class="col-md-8">
+                                <div class="wrapper">
+                                  <input type="checkbox" id="st1" value="1" />
+                                  <label for="st1"></label>
+                                  <input type="checkbox" id="st2" value="2" />
+                                  <label for="st2"></label>
+                                  <input type="checkbox" id="st3" value="3" />
+                                  <label for="st3"></label>
+                                  <input type="checkbox" id="st4" value="4" />
+                                  <label for="st4"></label>
+                                  <input type="checkbox" id="st5" value="5" />
+                                  <label for="st5"></label>
+                                </div>
                                 <div class="modal-discription"></div>
+
+
+
                               </div>
 
                             </div>
-
+                            <hr>
+                            <div class="popupTrailer embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
+                            </div>
                           </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                         </div>
                       </div>
                     </div>
@@ -222,7 +240,8 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "0">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
+
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -240,7 +259,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "1">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -257,7 +276,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "2">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -275,7 +294,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "3">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -295,7 +314,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "4">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -313,7 +332,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "5">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -331,7 +350,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "6">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -349,7 +368,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "7">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -367,7 +386,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "8">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -385,7 +404,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "9">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -403,7 +422,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "10">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -421,7 +440,7 @@
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                             <button type="button" class="btn btn-primary btn-sm btn-below-card" data-toggle="modal" data-target=".bd-example-modal-lg" value = "11">View</button>
-                            <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button>
+                            <!-- <button type="button" class="btn btn-primary btn-sm btn-below-card">Get Ticket</button> -->
                           </div>
                           <!-- <small class="text-muted">9 mins</small> -->
                         </div>
@@ -460,101 +479,15 @@
             <div>
               <h3 class="trailer-title">Black Panther</h3>
               <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xjDjIWPwcPU" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item2" src="https://www.youtube.com/embed/xjDjIWPwcPU" allowfullscreen></iframe>
               </div>
               <p class="sidebar-discription">
-                Check out candid photos of the 2018 Academy Award nominees during the making of their movies. Join our IMDb LIVE Viewing Party at 7:30 p.m. ET/4:30 p.m. PT Sunday, March 4.
+                King T'Challa returns home from America to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantel to join with girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan "special forces"), and an American secret agent, to prevent Wakanda from being dragged into a world war.
               </p>
 
               <br>
               <div>
-                <table class="table table-dark table-customize">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Movie Name</th>
-                      <th scope="col">Upcome</th>
-                      <!-- <th scope="col">Handle</th> -->
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td class="text-space">Blade Runner</td>
-                      <td>
-                        <div class="wrapper">
-                          <!-- <input type="checkbox" id="st1" value="1" />
-                          <label for="st1"></label>
-                          <input type="checkbox" id="st2" value="2" />
-                          <label for="st2"></label>
-                          <input type="checkbox" id="st3" value="3" />
-                          <label for="st3"></label>
-                          <input type="checkbox" id="st4" value="4" />
-                          <label for="st4"></label>
-                          <input type="checkbox" id="st5" value="5" />
-                          <label for="st5"></label> -->
-                        </div>
-                        <!-- <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i> -->
-                      </td>
-                      <!-- <td>@mdo</td> -->
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td class="text-space">Black Panther</td>
-                      <td>
-                        <div class="wrapper">
-                          <input type="checkbox" id="st1" value="1" />
-                          <label for="st1"></label>
-                          <input type="checkbox" id="st2" value="2" />
-                          <label for="st2"></label>
-                          <input type="checkbox" id="st3" value="3" />
-                          <label for="st3"></label>
-                          <input type="checkbox" id="st4" value="4" />
-                          <label for="st4"></label>
-                          <input type="checkbox" id="st5" value="5" />
-                          <label for="st5"></label>
-                        </div>
-                        <!-- <div class="wrapper">
-                          <input type="checkbox" id="st1" value="1" />
-                            <label for="st1"></label>
-                        </div>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i> -->
-                      </td>
-                      <!-- <td>@fat</td> -->
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td class="text-space">Lady Bird</td>
-                      <td>
-                        <!-- <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i>
-                        <i class="material-icons"><span class="ratting-star">star_border</span></i> -->
-                        <div class="wrapper">
-                          <input type="checkbox" id="st1" value="1" />
-                          <label for="st1"></label>
-                          <input type="checkbox" id="st2" value="2" />
-                          <label for="st2"></label>
-                          <input type="checkbox" id="st3" value="3" />
-                          <label for="st3"></label>
-                          <input type="checkbox" id="st4" value="4" />
-                          <label for="st4"></label>
-                          <input type="checkbox" id="st5" value="5" />
-                          <label for="st5"></label>
-                        </div>
-                      </td>
-                      <!-- <td>@twitter</td> -->
-                    </tr>
-                  </tbody>
-                </table>
+                
               </div>
 
               <div class="sidebar-theater-button-div">
@@ -605,32 +538,7 @@
                       <!--/.First column-->
 
                       <hr class="clearfix w-100 d-md-none">
-
-                      <!--Second column-->
-                      <!-- <div class="col-md-2 mx-auto">
-                          <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
-                          <ul class="list-unstyled">
-                              <li><a href="#!">Link 1</a></li>
-                              <li><a href="#!">Link 2</a></li>
-                              <li><a href="#!">Link 3</a></li>
-                              <li><a href="#!">Link 4</a></li>
-                          </ul>
-                      </div> -->
-                      <!--/.Second column-->
-
                       <hr class="clearfix w-100 d-md-none">
-
-                      <!--Third column-->
-                      <!-- <div class="col-md-2 mx-auto">
-                          <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
-                          <ul class="list-unstyled">
-                              <li><a href="#!">Link 1</a></li>
-                              <li><a href="#!">Link 2</a></li>
-                              <li><a href="#!">Link 3</a></li>
-                              <li><a href="#!">Link 4</a></li>
-                          </ul>
-                      </div> -->
-                      <!--/.Third column-->
 
                       <hr class="clearfix w-100 d-md-none">
                       <div class="col-md-2">
@@ -658,20 +566,6 @@
                       </div>
                   </div>
               </div>
-              <!--/.Footer Links-->
-
-
-              <!--Call to action-->
-              <!-- <div class="text-center py-3">
-                  <ul class="list-unstyled list-inline mb-0">
-                      <li class="list-inline-item">
-                          <h5 class="mb-1">Register for free</h5>
-                      </li>
-                      <li class="list-inline-item"><a href="#!" class="btn btn-danger btn-rounded">Sign up!</a></li>
-                  </ul>
-              </div> -->
-              <!--/.Call to action-->
-
               <hr>
 
               <!--Social buttons-->
@@ -702,12 +596,18 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <!-- <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
     <script src="js/script.js"></script>
+    <script src="js/coologin.js"></script>
+    <script src="js/allmovie.js"></script>
     <script src="js/vendor/popper.min.js"></script>
+    <script src="js/js.cookie.js "></script>
+    <!-- <script src="js/vendor/node_modules/js-cookie/src/copy.js "></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- <script src="js/rating.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   </body>
 </html>
