@@ -55,4 +55,5 @@ Beta v1.5 - Kwok (April 14 at 16:15)
 	
 Beta v1.6 - Noah (April 17 at 2:40)
 	1. MovieSearch.java for the searching process
+	2. Sent a second push to the server to fix numbering mistake
 
