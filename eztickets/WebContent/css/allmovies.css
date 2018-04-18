@@ -1,0 +1,60 @@
+.allmovie_head {
+  text-align: center;
+  margin: 10%;
+}
+
+/* =============== jumbotrom =============== */
+.jumbotrom_movie {
+  background-image: url(view3.jpg);
+  color: white;
+  margin-top: 30px;
+  /* background: gray; */
+}
+
+.name_in_jumbotron {
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.dis_in_jumbotron {
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ========================== jumbotrom ========================== */
+
+/* ========================== movie list ========================== */
+
+.card {
+  margin: 5px;
+  max-width: 150px;
+}
+
+.card-body-p {
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.modal-movietitle {
+  width: 100%;
+}
+
+.exampleModalLongRating {
+  text-align: center;
+  background-color: CadetBlue;
+  margin-left: 45%;
+  margin-right: 45%;
+  color: white;
+  font-size: 1.5em;
+}
+
+/* ========================== movie list ========================== */
+
+.allmovieSideBar {
+  border-radius: 10px;
+  background-color: White;
+  box-shadow:2px 2px 8px Silver;
+  max-height: 400px;
+}
