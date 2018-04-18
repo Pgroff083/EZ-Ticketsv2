@@ -15,7 +15,7 @@ $(document).ready(function()  {
   $.ajax(settingsNew).done(function (response) {
 
     var movies_albums = response.results;
-    console.log(movies_albums);
+    // console.log(movies_albums);
 
     // ---------- discription ----------
         $('.discription_pic').attr('src', "http://image.tmdb.org/t/p/w185/" + movies_albums[12].poster_path)
@@ -69,9 +69,9 @@ $(document).ready(function()  {
 
   });
 
-  $( ".nav-btn-search" ).click(function() {
-    var searchInput = $( '.nav-input-search' ).val();
-    console.log(searchInput);
-  });
+  // $( ".nav-btn-search" ).click(function() {
+  //   var searchInput = $( '.nav-input-search' ).val();
+  //   console.log(searchInput);
+  // });
 
 })

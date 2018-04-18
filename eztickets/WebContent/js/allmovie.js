@@ -8,11 +8,6 @@
 // [2]. json object from backend is SEARCH RESULT
 
 
-
-
-
-
-
 var obj =
 {
   "results":

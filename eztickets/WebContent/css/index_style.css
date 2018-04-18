@@ -15,6 +15,7 @@ body {
 }
 
 .cutomize_sign_btn {
+  right: 0;
   font-family: 'Lora', serif;
   padding: 4px 2px 4px 2px;
   text-align: center;
@@ -74,6 +75,7 @@ body {
 
 .nav-customized-font {
   /* font-family: 'Josefin Slab:100', serif; */
+
   margin-right: 5px !important;
 }
 
@@ -472,6 +474,18 @@ a {
 
 
 
+/* ------------------------CSS 404 footer------------------------*/
+
+  .outer {
+    margin-top: 50px;
+  }
+
+  .textOfFourOFour {
+    margin: 2%;
+  }
+
+
+/* ------------------------CSS 404 footer------------------------*/
 
 
 
@@ -496,3 +510,10 @@ a {
 
 
 /* ------------------------CSS Checkout Page------------------------*/
+.mavgroup {
+  right: 0 !important;
+  position: absolute !important;
+  /* float:right !important; */
+  margin-right: 20px;
+  top:8px;
+}
