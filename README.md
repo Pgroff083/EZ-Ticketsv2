@@ -56,4 +56,11 @@ Beta v1.5 - Kwok (April 14 at 16:15)
 Beta v1.6 - Noah (April 17 at 2:40)
 	1. MovieSearch.java for the searching process
 	2. Sent a second push to the server to fix numbering mistake
+	
+Beta v1.7 - Zhicheng (April 17 at 3:00)
+	1. Added changes to home page
+	
+Beta v1.8 - Noah (April 18 at 2:09)
+	1. Adding 404 page
+	2. Added the EZ tickets icon to homepage, may need to add to every page
 
