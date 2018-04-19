@@ -63,4 +63,11 @@ Beta v1.7 - Zhicheng (April 17 at 3:00)
 Beta v1.8 - Noah (April 18 at 2:09)
 	1. Adding 404 page
 	2. Added the EZ tickets icon to homepage, may need to add to every page
+	
+Beta v1.9 - Kwok (April 18 at 6:52)
+	1. take all of the html page out from the other_page folder
+	2. After that, I changed some code in index.html, 404.html, AllMovies.html
+	3. change little bit with updateDatabase and SearchMovies
+	4. change with the allmovie.js which after the search bar send the search keyword to back-end, back-end will send a JSON object as a result
+	5. I also add a link in web.xml to link to the 404 page
 

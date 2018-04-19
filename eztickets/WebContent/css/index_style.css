@@ -11,11 +11,9 @@ body {
   margin-bottom: 0 !important;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
-  border-radius: 5px;
 }
 
 .cutomize_sign_btn {
-  right: 0;
   font-family: 'Lora', serif;
   padding: 4px 2px 4px 2px;
   text-align: center;
@@ -73,9 +71,10 @@ body {
     font-size: 1em;
 }
 
+
+
 .nav-customized-font {
   /* font-family: 'Josefin Slab:100', serif; */
-
   margin-right: 5px !important;
 }
 
@@ -95,19 +94,8 @@ body {
   margin-right: 20px !important;
 }
 
-.nav-profile-img {
-  max-height: 40px;
-  border-radius: 50%;
-  margin-left: 5px;
-  margin-right: 5px;
-}
 
-/* ==============================CSS nav bar==============================*/
-
-
-#exampleModalLabel {
-  font-size: 1.5em;
-}
+/* ------------------------CSS nav bar------------------------*/
 
 .front-page-head {
   text-align: center;
@@ -208,56 +196,9 @@ body {
 }
 
 /* ------------------------CSS nav bar------------------------*/
-/* ================================================================= */
-/* ------------------------CSS discription------------------------*/
 
-
-.discription {
-  background-color: white;
-  margin-bottom: 20px;
-}
-
-.discription_pic {
-  margin: 10px;
-  max-width: 100%;
-  margin-bottom: 40px;
-}
-
-.popupUpperRow {
-  margin-bottom: 40px;
-}
-
-/* ------------------------CSS discription------------------------*/
-/* ================================================================= */
-/* ------------------------CSS album------------------------*/
 
 /* ========= album ========= */
-
-.popupTrailer {
-    padding-top: 20px;
-    margin: auto;
-    align: center !important;
-    max-width: 500px;
-}
-
-.cardimg-custom {
-  max-height: 250px;
-  max-width: 200px;
-}
-.release_time {
-  font-family: 'Lora', serif;
-}
-
-.movie_rating {
-  padding: 5px;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: SteelBlue;
-  color: white;
-  font-family: 'Abril Fatface', cursive;
-  font-size: 1.3em;
-  margin-left: 7px;
-}
 
 .intro-paragrapg {
   font-family: 'Lora', serif;
@@ -270,9 +211,8 @@ body {
 .customize-album {
   padding-top: 120px !important;
   background-color: white !important;
-  /* margin-left: 70px;
-  margin-right: 70px; */
-
+  margin-left: 70px;
+  margin-right: 70px;
   /* shadow: 10px 10px 10px 10px rgba(0,0,0,.1); */
   /* box-shadow: -webkit-box-shadow: -1px 4px 54px -11px rgba(0,0,0,0.75);
 -moz-box-shadow: -1px 4px 54px -11px rgba(0,0,0,0.75);
@@ -322,6 +262,37 @@ box-shadow: -1px 4px 54px -11px rgba(0,0,0,0.75); */
   padding: 10px;
 }
 
+
+.bg-white {
+  background-color: yellow;
+}
+
+
+
+
+
+
+h1 {
+  font-size: 3em;
+  color: white;
+  text-shadow:2px 2px 8px #2B2109;
+  font-family: 'Josefin Slab', serif;
+}
+
+/* .cardimg-custom {
+  max-height: 250px;
+} */
+
+.discription {
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.discription_pic {
+  margin: 10px;
+  max-width: 100%;
+}
+
 .card-text {
   text-align: center;
   font-size: 0.7em;
@@ -349,21 +320,6 @@ box-shadow: -1px 4px 54px -11px rgba(0,0,0,0.75); */
     background-color: #9765AE;
     border-color: #9765AE;
 }
-
-.modal-discription {
-  /* margin: 10px; */
-  margin-top: 10px;
-  font-family: 'Lora', serif;
-}
-
-.modal-title {
-  text-align: center !important;
-  font-size: 2em;
-  margin-left: 20px;
-}
-
-/* ------------------------CSS album------------------------*/
-/* ================================================================= */
 
 .front-sidebar {
   color: white;
@@ -393,20 +349,15 @@ box-shadow: -1px 4px 54px -11px rgba(0,0,0,0.75); */
   color: black;
 }
 
-.table td, .table th{
+/*.table td, .table th{
   padding: 0 !important;
-  vertical-align: middle !important;
-}
+  vertical-align: !important;
+}*/
 
 .wrapper {
-  /* position: relative; */
   padding-bottom: 0 !important;
   margin: 0 !important;
-  left: 15% !important;
-  /* bottom: 10px; */
 }
-
-
 
 .text-space {
   padding-bottom: 0 !important;
@@ -436,9 +387,7 @@ box-shadow: -1px 4px 54px -11px rgba(0,0,0,0.75); */
 } */
 
 
-a {
-  text-decoration: none !important;
-}
+
 
 /* ------------------------CSS sidebar------------------------*/
 
@@ -474,18 +423,6 @@ a {
 
 
 
-/* ------------------------CSS 404 footer------------------------*/
-
-  .outer {
-    margin-top: 50px;
-  }
-
-  .textOfFourOFour {
-    margin: 2%;
-  }
-
-
-/* ------------------------CSS 404 footer------------------------*/
 
 
 
@@ -510,10 +447,3 @@ a {
 
 
 /* ------------------------CSS Checkout Page------------------------*/
-.mavgroup {
-  right: 0 !important;
-  position: absolute !important;
-  /* float:right !important; */
-  margin-right: 20px;
-  top:8px;
-}

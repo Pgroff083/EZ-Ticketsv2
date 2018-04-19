@@ -121,7 +121,7 @@ public class updateDatabase 	{
 		    
 		    
 	        }
-	    	if(same == false)	{
+	    	if(same == false)	{ 
 	    		if(sameJSON == true)	{
 	    			selectSQL = ("select * from Movies where MoviesName = '" + previousMovie + "';");
 	    			rs = preparedStatement.executeQuery(selectSQL);
@@ -134,7 +134,7 @@ public class updateDatabase 	{
 		    			JSON = JSON.replace("\'", "\\'");
 		    		}
 	    		}
-	    		query = "INSERT INTO Movies (MoviesName , JSON) VALUES ('" + dataTable[z][1] + "','" + JSON +"');";
+	    		query = "INSERT INTO Movies (MoviesName , JSON) VALUES ('" + dataTable[z][1] + "','" + JSON.replace("\\\"", "\\\\\\\"") +"');";
 	            executeQuery(query);
 	            selectSQL = ("select * from Movies where MoviesName = '" + dataTable[z][1] + "';");
 	            rs = preparedStatement.executeQuery(selectSQL);

@@ -4,9 +4,11 @@ import java.util.*;
 import java.io.*;
 import java.sql.*;
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import org.json.simple.*;
 
+@WebServlet("/moviesSearch")
 public class MovieSearch extends HttpServlet {
 	static String url = "jdbc:mysql://eztickets.ddns.net:3306/movies";
 	static String user = "gccc";
@@ -45,8 +47,11 @@ public class MovieSearch extends HttpServlet {
 			System.out.println("Failed to make connection!");
 		}
 		
-	//Get search request
+		results.clear();
+		//Get search request
 		String search = request.getParameter("search");
+		System.out.println(search);
+		//String search = "b";
 		int numResults = searchDatabase(search);
 		if(numResults == 0)		{
 			response.getWriter().println("101");	//No results
@@ -56,10 +61,8 @@ public class MovieSearch extends HttpServlet {
 			packagedJSON.put("query", search);
 			packagedJSON.put("numResults", numResults);
 			packagedJSON.put("results", JSONResults);
-			response.getWriter().println(packagedJSON.toJSONString());
-		}
-		
-		
+			response.getWriter().println(packagedJSON.toJSONString().replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}").replace("'", "\\'").replace("\\\\\"", "\\\\\\\""));
+		}		
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -70,29 +73,27 @@ public class MovieSearch extends HttpServlet {
 	public static int searchDatabase(String s)	{	//Return # of matches		
 		try	{	
 				//First, fill the array with every movie entry...
-			String json = null;
+			ArrayList<String> json = new ArrayList<String>();
 			String selectSQL = "SELECT * FROM Movies";		         
 	    	Statement preparedStatement = connection.createStatement();		         
 	    	ResultSet rs = preparedStatement.executeQuery(selectSQL);
-            rs.next();
             while(rs.next())	{
 	    		String movie = rs.getString("MoviesName");
-	    		json = rs.getString("JSON");
+	    		json.add(rs.getString("JSON"));
 	    		results.add(movie);
 	        }
             
             //Now remove entries without a match
 			for(int x = 0; x < results.size(); x++)	{
+				System.out.println(results.get(x));
 				if(results.get(x).contains(s))	{
-					JSONResults.add(json);
+					JSONResults.add(json.get(x));										
 				}
-			}
-            
+			}            
             
 		} catch(SQLException se)	{
 			se.printStackTrace();
-		}
-		
+		}		
 		return JSONResults.size();
 	}
 	

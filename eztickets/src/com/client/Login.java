@@ -1,14 +1,11 @@
 package com.client;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -61,25 +58,27 @@ public class Login extends HttpServlet {
 		try {
 			// connect the database
 			String selectSQL = "SELECT * FROM infoTable";
+			String rptext = null;
 			Statement preparedStatement = connection.createStatement();
 			ResultSet rs = preparedStatement.executeQuery(selectSQL);
 
 			while (rs.next()) {
 				String temail = rs.getString("EMAIL");
 				String tpassword = rs.getString("PASSWORD");
-				String loginID = rs.getString("LOGINID");
+				
 				// if there has a same email and password with user's input, then 
 				// set login true and break it
-				if (temail.equals(email) && tpassword.equals(password)) {
-					response.getWriter().println("200");
+				if (email.equals(temail) && password.equals(tpassword)) {
+					rptext = email;
 					break;
 				}
 				else 
 				{
-					response.getWriter().println("100");
-					break;
+					rptext = "100";
 				}					
 			}
+			response.getWriter().print(rptext);
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

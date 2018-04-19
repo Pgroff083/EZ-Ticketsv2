@@ -29,7 +29,6 @@ function checkCookie() {
     if (user != "") {
       var profileString = '<div class="profile-dropdown"><img class="dropdown-toggle nav-profile-img" id="dropdownMenuButton-profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="graphics/cardimg.jpg" alt="no pic!"><ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="#">Profile</a></li><li><a class="dropdown-item" href="#">Ticktes</a></li><li><a class="dropdown-item" id="logout_button" href="#">Log out</a></li></ul></div>';
       $(".wheredropdowis").append(profileString);
-    	// $(".profile-dropdown").hide();
     }
 }
 

@@ -19,7 +19,6 @@ footer backgroun-color: #626275;
   margin-bottom: 0 !important;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
-  border-radius: 5px;
 }
 
 .customize-EZTicket {
@@ -97,7 +96,7 @@ footer backgroun-color: #626275;
 
 .nav-customized-font {
   /* font-family: 'Josefin Slab:100', serif; */
-   margin-right: 5px !important;
+   margin-right: 5px !important; 
 }
 
 .text-white {
@@ -151,13 +150,4 @@ footer backgroun-color: #626275;
   width: 100%;
   position: relative;
   bottom: 0;
-}
-
-/* ///////// */
-.mavgroup {
-  right: 0 !important;
-  position: absolute !important;
-  /* float:right !important; */
-  margin-right: 20px;
-  top:8px;
 }

@@ -69,9 +69,14 @@ $(document).ready(function()  {
 
   });
 
-  // $( ".nav-btn-search" ).click(function() {
-  //   var searchInput = $( '.nav-input-search' ).val();
-  //   console.log(searchInput);
-  // });
+//   $( ".nav-btn-search" ).click(function() {
+//     var searchInput = $( '.nav-input-search' ).val();
+//     $.get('login', {
+//			search : searchInput
+//		}, function(responseText) {
+//			console.log(responseText);
+//		});
+//     
+//   })
 
 })

@@ -507,11 +507,16 @@ var obj =
 
 $(document).ready(function() {
 
-  // ==============search===============
+  // ==============search===============  
   $( ".nav-btn-search" ).click(function() {
-    var searchInput = $( '.nav-input-search' ).val();
-    console.log(searchInput);
-  });
+	     var searchInput = $( '.nav-input-search' ).val();
+	     $.get('moviesSearch', {
+				search : searchInput
+			}, function(responseText) {
+				console.log(responseText);
+			});
+	     
+	   })
 
 
   var imgTagsrc = obj.results;
