@@ -74,7 +74,7 @@ public class Registration extends HttpServlet {
 		}
 
 		// Take value from user input
-		String firstname = request.getParameter("firstName");
+		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String loginID = request.getParameter("loginID");
 		String password = request.getParameter("password");
@@ -95,10 +95,10 @@ public class Registration extends HttpServlet {
 					break;
 				}
 				else {
-					query = "INSERT INTO infoTable (FIRSTNAME, LASTNAME, LOGINID, PASSWORD, EMAIL) VALUES ('" + firstname
+					query = "INSERT INTO infoTable (FIRSTNAME, LASTNAME, LOGINID, PASSWORD, EMAIL) VALUES ('" + firstName
 							+ "','" + lastName + "','" + loginID + "','" + password + "','" + email + "');";
 					executeQuery(query);					
-					sendingEmail.messages(firstname,lastName, email, host, port, muser, pass);					
+					sendingEmail.messages(firstName,lastName, email, host, port, muser, pass);					
 					response.getWriter().println("400");
 					break;
 				}

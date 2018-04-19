@@ -77,7 +77,7 @@ public class ReadMoviesDB extends HttpServlet {
 				
 				json.put("results", moviesList);					
 				text = json.toJSONString();
-				response.getWriter().println((text.replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}").replace("'", "\\'").replace("\\\\\"", "\\\\\\\"")));						
+				response.getWriter().print((text.replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}")));						
     	  	}
     	  	else 
     	  	{
@@ -148,7 +148,7 @@ public class ReadMoviesDB extends HttpServlet {
     	  			json.put(j, json2.toJSONString());
     	  		}    	  		   	  		    	  		
     	  		text = json.toJSONString();    	  		
-    	  		response.getWriter().println((text.replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}").replace("'", "\\'")));				
+    	  		response.getWriter().print((text.replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}")));				
     	  	}
     	  	
          

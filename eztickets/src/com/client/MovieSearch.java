@@ -16,12 +16,7 @@ public class MovieSearch extends HttpServlet {
 	static Connection connection = null;
 	static String query = null;
 	Statement statement = null;
-	
-	static ArrayList<String> JSONResults = new ArrayList<String>();
-	static ArrayList<String> results = new ArrayList<String>();
-	JSONObject packagedJSON = new JSONObject();
-	
-	@SuppressWarnings("unchecked")
+		
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
@@ -47,21 +42,26 @@ public class MovieSearch extends HttpServlet {
 			System.out.println("Failed to make connection!");
 		}
 		
+		
+		ArrayList<String> results = new ArrayList<String>();
+		ArrayList<String> JSONResults = new ArrayList<String>();
+		JSONObject packagedJSON = new JSONObject();
+		
 		results.clear();
 		//Get search request
 		String search = request.getParameter("search");
-		System.out.println(search);
-		//String search = "b";
-		int numResults = searchDatabase(search);
+		int numResults = searchDatabase(search, JSONResults);
 		if(numResults == 0)		{
 			response.getWriter().println("101");	//No results
 		}
-		else	{
+		else	{			
 			//Send the Arraylist
 			packagedJSON.put("query", search);
 			packagedJSON.put("numResults", numResults);
 			packagedJSON.put("results", JSONResults);
-			response.getWriter().println(packagedJSON.toJSONString().replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}").replace("'", "\\'").replace("\\\\\"", "\\\\\\\""));
+			response.getWriter().println(packagedJSON.toJSONString().replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}").replace("\\\\\"", "\\\""));
+			packagedJSON.clear();
+			
 		}		
 	}
 	
@@ -70,33 +70,26 @@ public class MovieSearch extends HttpServlet {
 		doGet(request, response);
 	}
 	
-	public static int searchDatabase(String s)	{	//Return # of matches		
+	public static int searchDatabase(String s, ArrayList<String> JSONResults)	{	//Return # of matches		
 		try	{	
-				//First, fill the array with every movie entry...
-			ArrayList<String> json = new ArrayList<String>();
+			//First, fill the array with every movie entry...
 			String selectSQL = "SELECT * FROM Movies";		         
 	    	Statement preparedStatement = connection.createStatement();		         
 	    	ResultSet rs = preparedStatement.executeQuery(selectSQL);
             while(rs.next())	{
-	    		String movie = rs.getString("MoviesName");
-	    		json.add(rs.getString("JSON"));
-	    		results.add(movie);
-	        }
-            
-            //Now remove entries without a match
-			for(int x = 0; x < results.size(); x++)	{
-				System.out.println(results.get(x));
-				if(results.get(x).contains(s))	{
-					JSONResults.add(json.get(x));										
-				}
-			}            
-            
+            	if(rs.getString("MoviesName").toLowerCase().contains(s.toLowerCase())) 
+            	{
+            		if(rs.getString("MoviesName").contains("3D") || rs.getString("MoviesName").contains("2D")) 
+            		{
+            			
+            		}
+            		else
+            			JSONResults.add(rs.getString("JSON"));
+            	}
+	        }            
 		} catch(SQLException se)	{
 			se.printStackTrace();
 		}		
 		return JSONResults.size();
 	}
-	
-	
-	
 }
