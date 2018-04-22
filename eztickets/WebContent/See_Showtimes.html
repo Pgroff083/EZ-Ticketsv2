@@ -1,0 +1,1760 @@
+<!-- This is the showtimes file for the final step before proceeding to checkout -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+<!--     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/rating.css">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/graphics/freepik.jpg">
+
+    <title>EZ-Tickets</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../bootstrap-4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Josefin+Slab:100,600|Playfair+Display+SC" rel="stylesheet">
+    <!-- for card text -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="album.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/SimpleStarRating.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/See_Showtime_Style.css">
+  </head>
+
+  <body>
+        <div id="navBar_style" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow customize-font">
+          <a class="p-2 text-white my-0 mr-md-auto font-weight-normal customize-EZTicket" href="./index.html"><h5 class="my-0 mr-md-auto font-weight-normal">EZ - Tickets</h5></a>
+
+          <div class="input-group navbar-searchinput">
+            <input type="text" class="form-control nav-input-search" placeholder="Enter Movie Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary nav-btn-search" type="button"><i class="material-icons search-icon">search</i></button>
+            </div>
+          </div>
+
+
+          <nav class="my-2 my-md-0 mr-md-3 nav-customized-font">
+
+            <a class="p-2 text-white" href="#">Movie</a>
+            <!-- <a class="p-2 text-white" href="./other_page/checkout.html">Checkout</a> -->
+            <a class="p-2 text-white dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Moive</a>
+                <a class="dropdown-item" href="#">Tickets</a>
+                <a class="dropdown-item" href="#">About us</a>
+              </div>
+
+<!-- //////////////// popup login section //////////////// -->
+                <button type="button" class="btn btn-primary cutomize_sign_btn after-login-loginbtn nav-login-button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log In</button>
+                <!-- <i class="material-icons" style="display: none">account_box</i> -->
+                <div class="modal fade customize-font" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="login" method="POST">
+                          <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Email:</label>
+                            <input type="text" class="form-control" id="emailAddress">
+                          </div>
+                          <div class="form-group">
+                            <label for="message-text" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="passwordValue">
+                          </div>
+                          <div class="modal-footer">
+                          <a class="btn btn-outline-primary button_signup after-login-signupbtn" href="./other_page/Registration.html">Sign up</a>
+                            <!-- <button class="btn btn-primary cutomize_sign_btn popup-login-btn">Log In</button> -->
+                          <input class="btn btn-primary cutomize_sign_btn popup-login-btn" type="button" name="login" value="Login" href="index.html" data-dismiss="modal" id="btnSubmit" />
+                            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!-- //////////////// popup login section //////////////// -->
+          </nav>
+          <a class="btn btn-outline-primary button_signup after-login-signupbtn nav-login-button" href="./other_page/Registration.html">Sign up</a>
+
+<!-- ///////////// dropdown profile button /////////////  -->
+            <div class="profile-dropdown">
+              <img class="dropdown-toggle nav-profile-img" id="dropdownMenuButton-profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../graphics/cardimg.jpg" alt="no pic!">
+              <ul class="dropdown-menu" role="menu">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Ticktes</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                <!-- <li class="divider"></li> -->
+                <li><a class="dropdown-item" id="logout_button" href="#">Log out</a></li>
+              </ul>
+            </div>
+<!-- ///////////// dropdown profile button /////////////  -->
+
+        </div>
+
+    <br>
+<!-- Section for Movie image and Name -->
+  <div class="flex-md-row">
+    <div class="col-sm-2 movie-card">
+      <div class="card sm-2 box-shadow">
+        <img class="card-img-top cardimg-custom poster" src="" alt="Card image cap">
+      </div>
+    </div>
+  </div>
+
+    <br>
+    <div class="col-md-12 movie-title">
+      <h1 class ="movie_name"></h1>
+    </div>
+    <br>
+
+    <!-- This starts the theater tabs section -->
+    <!-- Keep each theater invisible if it is not related to the specific movie -->
+      <div class="card mb-4 box-shadow theater-1">
+        <h2><span class="theater_1_name"></span></h2>
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Sunday</a></li>
+            <li><a href="#tab2" data-toggle="tab">Monday</a></li>
+            <li><a href="#tab3" data-toggle="tab">Tuesday</a></li>
+            <li><a href="#tab4" data-toggle="tab">Wednesday</a></li>
+            <li><a href="#tab5" data-toggle="tab">Thursday</a></li>
+            <li><a href="#tab6" data-toggle="tab">Friday</a></li>
+            <li><a href="#tab7" data-toggle="tab">Saturday</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab fade active" id="tab1">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test0" name="optradio"/><label class="radio-inline" for="test0"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test1" name="optradio"/><label class="radio-inline" for="test1"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test2" name="optradio"/><label class="radio-inline" for="test2"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test3" name="optradio"/><label class="radio-inline" for="test3"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test4" name="optradio"/><label class="radio-inline" for="test4"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test5" name="optradio"/><label class="radio-inline" for="test5"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test6" name="optradio"/><label class="radio-inline" for="test6"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test7" name="optradio"/><label class="radio-inline" for="test7"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test8" name="optradio"/><label class="radio-inline" for="test8"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test9" name="optradio"/><label class="radio-inline" for="test9"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test10" name="optradio"/><label class="radio-inline" for="test10"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test11" name="optradio"/><label class="radio-inline" for="test11"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test12" name="optradio"/><label class="radio-inline" for="test12"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test13" name="optradio"/><label class="radio-inline" for="test13"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test14" name="optradio"/><label class="radio-inline" for="test14"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test15" name="optradio"/><label class="radio-inline" for="test15"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Sunday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab2">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test16" name="optradio"/><label class="radio-inline" for="test16"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test17" name="optradio"/><label class="radio-inline" for="test17"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test18" name="optradio"/><label class="radio-inline" for="test18"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test19" name="optradio"/><label class="radio-inline" for="test19"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test20" name="optradio"/><label class="radio-inline" for="test20"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test21" name="optradio"/><label class="radio-inline" for="test21"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test22" name="optradio"/><label class="radio-inline" for="test22"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test23" name="optradio"/><label class="radio-inline" for="test23"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test24" name="optradio"/><label class="radio-inline" for="test24"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test25" name="optradio"/><label class="radio-inline" for="test25"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test26" name="optradio"/><label class="radio-inline" for="test26"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test27" name="optradio"/><label class="radio-inline" for="test27"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test28" name="optradio"/><label class="radio-inline" for="test28"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test29" name="optradio"/><label class="radio-inline" for="test29"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test30" name="optradio"/><label class="radio-inline" for="test30"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test31" name="optradio"/><label class="radio-inline" for="test31"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Monday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab3">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test32" name="optradio"/><label class="radio-inline" for="test32"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test33" name="optradio"/><label class="radio-inline" for="test33"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test34" name="optradio"/><label class="radio-inline" for="test34"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test35" name="optradio"/><label class="radio-inline" for="test35"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test36" name="optradio"/><label class="radio-inline" for="test36"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test37" name="optradio"/><label class="radio-inline" for="test37"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test38" name="optradio"/><label class="radio-inline" for="test38"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test39" name="optradio"/><label class="radio-inline" for="test39"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test40" name="optradio"/><label class="radio-inline" for="test40"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test41" name="optradio"/><label class="radio-inline" for="test41"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test42" name="optradio"/><label class="radio-inline" for="test42"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test43" name="optradio"/><label class="radio-inline" for="test43"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test44" name="optradio"/><label class="radio-inline" for="test44"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test45" name="optradio"/><label class="radio-inline" for="test45"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test46" name="optradio"/><label class="radio-inline" for="test46"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test47" name="optradio"/><label class="radio-inline" for="test47"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Tuesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab4">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test48" name="optradio"/><label class="radio-inline" for="test48"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test49" name="optradio"/><label class="radio-inline" for="test49"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test50" name="optradio"/><label class="radio-inline" for="test50"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test51" name="optradio"/><label class="radio-inline" for="test51"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test52" name="optradio"/><label class="radio-inline" for="test52"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test53" name="optradio"/><label class="radio-inline" for="test53"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test54" name="optradio"/><label class="radio-inline" for="test54"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test55" name="optradio"/><label class="radio-inline" for="test55"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test56" name="optradio"/><label class="radio-inline" for="test56"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test57" name="optradio"/><label class="radio-inline" for="test57"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test58" name="optradio"/><label class="radio-inline" for="test58"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test59" name="optradio"/><label class="radio-inline" for="test59"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test60" name="optradio"/><label class="radio-inline" for="test60"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test61" name="optradio"/><label class="radio-inline" for="test61"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test62" name="optradio"/><label class="radio-inline" for="test62"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test63" name="optradio"/><label class="radio-inline" for="test63"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Wednesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab5">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test64" name="optradio"/><label class="radio-inline" for="test64"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test65" name="optradio"/><label class="radio-inline" for="test65"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test66" name="optradio"/><label class="radio-inline" for="test66"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test67" name="optradio"/><label class="radio-inline" for="test67"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test68" name="optradio"/><label class="radio-inline" for="test68"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test69" name="optradio"/><label class="radio-inline" for="test69"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test70" name="optradio"/><label class="radio-inline" for="test70"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test71" name="optradio"/><label class="radio-inline" for="test71"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test72" name="optradio"/><label class="radio-inline" for="test72"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test73" name="optradio"/><label class="radio-inline" for="test73"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test74" name="optradio"/><label class="radio-inline" for="test74"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test75" name="optradio"/><label class="radio-inline" for="test75"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test76" name="optradio"/><label class="radio-inline" for="test76"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test77" name="optradio"/><label class="radio-inline" for="test77"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test78" name="optradio"/><label class="radio-inline" for="test78"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test79" name="optradio"/><label class="radio-inline" for="test79"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Thursday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab6">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test80" name="optradio"/><label class="radio-inline" for="test80"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test81" name="optradio"/><label class="radio-inline" for="test81"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test82" name="optradio"/><label class="radio-inline" for="test82"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test83" name="optradio"/><label class="radio-inline" for="test83"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test84" name="optradio"/><label class="radio-inline" for="test84"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test85" name="optradio"/><label class="radio-inline" for="test85"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test86" name="optradio"/><label class="radio-inline" for="test86"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test87" name="optradio"/><label class="radio-inline" for="test87"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test88" name="optradio"/><label class="radio-inline" for="test88"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test89" name="optradio"/><label class="radio-inline" for="test89"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test90" name="optradio"/><label class="radio-inline" for="test90"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test91" name="optradio"/><label class="radio-inline" for="test91"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test92" name="optradio"/><label class="radio-inline" for="test92"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test93" name="optradio"/><label class="radio-inline" for="test93"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test94" name="optradio"/><label class="radio-inline" for="test94"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test95" name="optradio"/><label class="radio-inline" for="test95"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Friday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab7">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test96" name="optradio"/><label class="radio-inline" for="test96"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test97" name="optradio"/><label class="radio-inline" for="test97"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test98" name="optradio"/><label class="radio-inline" for="test98"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test99" name="optradio"/><label class="radio-inline" for="test99"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test100" name="optradio"/><label class="radio-inline" for="test100"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test101" name="optradio"/><label class="radio-inline" for="test101"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test102" name="optradio"/><label class="radio-inline" for="test102"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test103" name="optradio"/><label class="radio-inline" for="test103"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test104" name="optradio"/><label class="radio-inline" for="test104"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test105" name="optradio"/><label class="radio-inline" for="test105"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test106" name="optradio"/><label class="radio-inline" for="test106"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test107" name="optradio"/><label class="radio-inline" for="test107"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test108" name="optradio"/><label class="radio-inline" for="test108"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test109" name="optradio"/><label class="radio-inline" for="test109"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test110" name="optradio"/><label class="radio-inline" for="test110"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test111" name="optradio"/><label class="radio-inline" for="test111"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Saturday</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-4 box-shadow theater-2">
+        <h2><span class="theater_2_name"></span></h2>
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab8" data-toggle="tab">Sunday</a></li>
+            <li><a href="#tab9" data-toggle="tab">Monday</a></li>
+            <li><a href="#tab10" data-toggle="tab">Tuesday</a></li>
+            <li><a href="#tab11" data-toggle="tab">Wednesday</a></li>
+            <li><a href="#tab12" data-toggle="tab">Thursday</a></li>
+            <li><a href="#tab13" data-toggle="tab">Friday</a></li>
+            <li><a href="#tab14" data-toggle="tab">Saturday</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab fade active" id="tab8">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test112" name="optradio"/><label class="radio-inline" for="test112"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test113" name="optradio"/><label class="radio-inline" for="test113"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test114" name="optradio"/><label class="radio-inline" for="test114"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test115" name="optradio"/><label class="radio-inline" for="test115"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test116" name="optradio"/><label class="radio-inline" for="test116"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test117" name="optradio"/><label class="radio-inline" for="test117"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test118" name="optradio"/><label class="radio-inline" for="test118"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test119" name="optradio"/><label class="radio-inline" for="test119"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test120" name="optradio"/><label class="radio-inline" for="test120"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test121" name="optradio"/><label class="radio-inline" for="test121"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test122" name="optradio"/><label class="radio-inline" for="test122"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test123" name="optradio"/><label class="radio-inline" for="test123"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test124" name="optradio"/><label class="radio-inline" for="test124"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test125" name="optradio"/><label class="radio-inline" for="test125"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test126" name="optradio"/><label class="radio-inline" for="test126"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test127" name="optradio"/><label class="radio-inline" for="test127"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Sunday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab9">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test128" name="optradio"/><label class="radio-inline" for="test128"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test129" name="optradio"/><label class="radio-inline" for="test129"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test130" name="optradio"/><label class="radio-inline" for="test130"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test131" name="optradio"/><label class="radio-inline" for="test131"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test132" name="optradio"/><label class="radio-inline" for="test132"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test133" name="optradio"/><label class="radio-inline" for="test133"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test134" name="optradio"/><label class="radio-inline" for="test134"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test135" name="optradio"/><label class="radio-inline" for="test135"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test136" name="optradio"/><label class="radio-inline" for="test136"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test137" name="optradio"/><label class="radio-inline" for="test137"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test138" name="optradio"/><label class="radio-inline" for="test138"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test139" name="optradio"/><label class="radio-inline" for="test139"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test140" name="optradio"/><label class="radio-inline" for="test140"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test141" name="optradio"/><label class="radio-inline" for="test141"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test142" name="optradio"/><label class="radio-inline" for="test142"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test143" name="optradio"/><label class="radio-inline" for="test143"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Monday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab10">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test144" name="optradio"/><label class="radio-inline" for="test144"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test145" name="optradio"/><label class="radio-inline" for="test145"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test146" name="optradio"/><label class="radio-inline" for="test146"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test147" name="optradio"/><label class="radio-inline" for="test147"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test148" name="optradio"/><label class="radio-inline" for="test148"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test149" name="optradio"/><label class="radio-inline" for="test149"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test150" name="optradio"/><label class="radio-inline" for="test150"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test151" name="optradio"/><label class="radio-inline" for="test151"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test152" name="optradio"/><label class="radio-inline" for="test152"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test153" name="optradio"/><label class="radio-inline" for="test153"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test154" name="optradio"/><label class="radio-inline" for="test154"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test155" name="optradio"/><label class="radio-inline" for="test155"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test156" name="optradio"/><label class="radio-inline" for="test156"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test157" name="optradio"/><label class="radio-inline" for="test157"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test158" name="optradio"/><label class="radio-inline" for="test158"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test159" name="optradio"/><label class="radio-inline" for="test159"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Tuesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab11">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test160" name="optradio"/><label class="radio-inline" for="test160"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test161" name="optradio"/><label class="radio-inline" for="test161"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test162" name="optradio"/><label class="radio-inline" for="test162"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test163" name="optradio"/><label class="radio-inline" for="test163"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test164" name="optradio"/><label class="radio-inline" for="test164"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test165" name="optradio"/><label class="radio-inline" for="test165"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test166" name="optradio"/><label class="radio-inline" for="test166"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test167" name="optradio"/><label class="radio-inline" for="test167"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test168" name="optradio"/><label class="radio-inline" for="test168"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test169" name="optradio"/><label class="radio-inline" for="test169"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test170" name="optradio"/><label class="radio-inline" for="test170"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test171" name="optradio"/><label class="radio-inline" for="test171"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test172" name="optradio"/><label class="radio-inline" for="test172"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test173" name="optradio"/><label class="radio-inline" for="test173"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test174" name="optradio"/><label class="radio-inline" for="test174"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test175" name="optradio"/><label class="radio-inline" for="test175"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Wednesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab12">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test176" name="optradio"/><label class="radio-inline" for="test176"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test177" name="optradio"/><label class="radio-inline" for="test177"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test178" name="optradio"/><label class="radio-inline" for="test178"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test179" name="optradio"/><label class="radio-inline" for="test179"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test180" name="optradio"/><label class="radio-inline" for="test180"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test181" name="optradio"/><label class="radio-inline" for="test181"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test182" name="optradio"/><label class="radio-inline" for="test182"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test183" name="optradio"/><label class="radio-inline" for="test183"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test184" name="optradio"/><label class="radio-inline" for="test184"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test185" name="optradio"/><label class="radio-inline" for="test185"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test186" name="optradio"/><label class="radio-inline" for="test186"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test187" name="optradio"/><label class="radio-inline" for="test187"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test188" name="optradio"/><label class="radio-inline" for="test188"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test189" name="optradio"/><label class="radio-inline" for="test189"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test190" name="optradio"/><label class="radio-inline" for="test190"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test191" name="optradio"/><label class="radio-inline" for="test191"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Thursday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab13">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test192" name="optradio"/><label class="radio-inline" for="test192"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test193" name="optradio"/><label class="radio-inline" for="test193"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test194" name="optradio"/><label class="radio-inline" for="test194"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test195" name="optradio"/><label class="radio-inline" for="test195"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test196" name="optradio"/><label class="radio-inline" for="test196"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test197" name="optradio"/><label class="radio-inline" for="test197"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test198" name="optradio"/><label class="radio-inline" for="test198"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test199" name="optradio"/><label class="radio-inline" for="test199"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test200" name="optradio"/><label class="radio-inline" for="test200"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test201" name="optradio"/><label class="radio-inline" for="test201"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test202" name="optradio"/><label class="radio-inline" for="test202"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test203" name="optradio"/><label class="radio-inline" for="test203"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test204" name="optradio"/><label class="radio-inline" for="test204"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test205" name="optradio"/><label class="radio-inline" for="test205"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test206" name="optradio"/><label class="radio-inline" for="test206"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test207" name="optradio"/><label class="radio-inline" for="test207"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Friday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab14">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test208" name="optradio"/><label class="radio-inline" for="test208"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test209" name="optradio"/><label class="radio-inline" for="test209"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test210" name="optradio"/><label class="radio-inline" for="test210"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test211" name="optradio"/><label class="radio-inline" for="test211"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test212" name="optradio"/><label class="radio-inline" for="test212"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test213" name="optradio"/><label class="radio-inline" for="test213"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test214" name="optradio"/><label class="radio-inline" for="test214"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test215" name="optradio"/><label class="radio-inline" for="test215"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test216" name="optradio"/><label class="radio-inline" for="test216"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test217" name="optradio"/><label class="radio-inline" for="test217"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test218" name="optradio"/><label class="radio-inline" for="test218"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test219" name="optradio"/><label class="radio-inline" for="test219"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test220" name="optradio"/><label class="radio-inline" for="test220"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test221" name="optradio"/><label class="radio-inline" for="test221"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test222" name="optradio"/><label class="radio-inline" for="test222"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test223" name="optradio"/><label class="radio-inline" for="test223"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Saturday</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-4 box-shadow theater-3">
+        <h2><span class="theater_3_name"></span></h2>
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab15" data-toggle="tab">Sunday</a></li>
+            <li><a href="#tab16" data-toggle="tab">Monday</a></li>
+            <li><a href="#tab17" data-toggle="tab">Tuesday</a></li>
+            <li><a href="#tab18" data-toggle="tab">Wednesday</a></li>
+            <li><a href="#tab19" data-toggle="tab">Thursday</a></li>
+            <li><a href="#tab20" data-toggle="tab">Friday</a></li>
+            <li><a href="#tab21" data-toggle="tab">Saturday</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab fade active" id="tab15">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test224" name="optradio"/><label class="radio-inline" for="test224"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test225" name="optradio"/><label class="radio-inline" for="test225"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="tets226" name="optradio"/><label class="radio-inline" for="test226"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test227" name="optradio"/><label class="radio-inline" for="test227"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test228" name="optradio"/><label class="radio-inline" for="test228"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test229" name="optradio"/><label class="radio-inline" for="test229"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test230" name="optradio"/><label class="radio-inline" for="test230"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test231" name="optradio"/><label class="radio-inline" for="test231"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test232" name="optradio"/><label class="radio-inline" for="test232"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test233" name="optradio"/><label class="radio-inline" for="test233"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test234" name="optradio"/><label class="radio-inline" for="test234"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test235" name="optradio"/><label class="radio-inline" for="test235"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test236" name="optradio"/><label class="radio-inline" for="test236"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test237" name="optradio"/><label class="radio-inline" for="test237"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test238" name="optradio"/><label class="radio-inline" for="test238"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test239" name="optradio"/><label class="radio-inline" for="test239"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Sunday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab16">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test240" name="optradio"/><label class="radio-inline" for="test240"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test241" name="optradio"/><label class="radio-inline" for="test241"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test242" name="optradio"/><label class="radio-inline" for="test242"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test243" name="optradio"/><label class="radio-inline" for="test243"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test244" name="optradio"/><label class="radio-inline" for="test244"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test245" name="optradio"/><label class="radio-inline" for="test245"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test246" name="optradio"/><label class="radio-inline" for="test246"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test247" name="optradio"/><label class="radio-inline" for="test247"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test248" name="optradio"/><label class="radio-inline" for="test248"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test249" name="optradio"/><label class="radio-inline" for="test249"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test250" name="optradio"/><label class="radio-inline" for="test250"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test251" name="optradio"/><label class="radio-inline" for="test251"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test252" name="optradio"/><label class="radio-inline" for="test252"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test253" name="optradio"/><label class="radio-inline" for="test253"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test254" name="optradio"/><label class="radio-inline" for="test254"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test255" name="optradio"/><label class="radio-inline" for="test255"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Monday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab17">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test256" name="optradio"/><label class="radio-inline" for="test32"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test257" name="optradio"/><label class="radio-inline" for="test33"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test258" name="optradio"/><label class="radio-inline" for="test34"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test259" name="optradio"/><label class="radio-inline" for="test35"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test260" name="optradio"/><label class="radio-inline" for="test36"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test261" name="optradio"/><label class="radio-inline" for="test37"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test262" name="optradio"/><label class="radio-inline" for="test38"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test263" name="optradio"/><label class="radio-inline" for="test39"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test264" name="optradio"/><label class="radio-inline" for="test264"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test265" name="optradio"/><label class="radio-inline" for="test265"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test266" name="optradio"/><label class="radio-inline" for="test266"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test267" name="optradio"/><label class="radio-inline" for="test267"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test268" name="optradio"/><label class="radio-inline" for="test268"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test269" name="optradio"/><label class="radio-inline" for="test269"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test270" name="optradio"/><label class="radio-inline" for="test270"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test271" name="optradio"/><label class="radio-inline" for="test271"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Tuesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab18">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test272" name="optradio"/><label class="radio-inline" for="test272"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test273" name="optradio"/><label class="radio-inline" for="test273"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test274" name="optradio"/><label class="radio-inline" for="test274"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test275" name="optradio"/><label class="radio-inline" for="test275"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test276" name="optradio"/><label class="radio-inline" for="test276"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test277" name="optradio"/><label class="radio-inline" for="test277"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test278" name="optradio"/><label class="radio-inline" for="test278"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test279" name="optradio"/><label class="radio-inline" for="test279"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test280" name="optradio"/><label class="radio-inline" for="test280"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test281" name="optradio"/><label class="radio-inline" for="test281"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test282" name="optradio"/><label class="radio-inline" for="test282"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test283" name="optradio"/><label class="radio-inline" for="test283"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test284" name="optradio"/><label class="radio-inline" for="test284"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test285" name="optradio"/><label class="radio-inline" for="test285"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test286" name="optradio"/><label class="radio-inline" for="test286"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test287" name="optradio"/><label class="radio-inline" for="test287"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Wednesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab19">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test288" name="optradio"/><label class="radio-inline" for="test288"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test289" name="optradio"/><label class="radio-inline" for="test289"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test290" name="optradio"/><label class="radio-inline" for="test290"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test291" name="optradio"/><label class="radio-inline" for="test291"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test292" name="optradio"/><label class="radio-inline" for="test292"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test293" name="optradio"/><label class="radio-inline" for="test293"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test294" name="optradio"/><label class="radio-inline" for="test294"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test295" name="optradio"/><label class="radio-inline" for="test295"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test296" name="optradio"/><label class="radio-inline" for="test296"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test297" name="optradio"/><label class="radio-inline" for="test297"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test298" name="optradio"/><label class="radio-inline" for="test298"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test299" name="optradio"/><label class="radio-inline" for="test299"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test300" name="optradio"/><label class="radio-inline" for="test300"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test301" name="optradio"/><label class="radio-inline" for="test301"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test302" name="optradio"/><label class="radio-inline" for="test302"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test303" name="optradio"/><label class="radio-inline" for="test303"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Thursday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab20">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test304" name="optradio"/><label class="radio-inline" for="test304"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test305" name="optradio"/><label class="radio-inline" for="test305"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test306" name="optradio"/><label class="radio-inline" for="test306"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test307" name="optradio"/><label class="radio-inline" for="test307"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test308" name="optradio"/><label class="radio-inline" for="test308"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test309" name="optradio"/><label class="radio-inline" for="test309"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test310" name="optradio"/><label class="radio-inline" for="test310"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test311" name="optradio"/><label class="radio-inline" for="test311"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test312" name="optradio"/><label class="radio-inline" for="test312"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test313" name="optradio"/><label class="radio-inline" for="test313"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test314" name="optradio"/><label class="radio-inline" for="test314"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test315" name="optradio"/><label class="radio-inline" for="test315"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test316" name="optradio"/><label class="radio-inline" for="test316"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test317" name="optradio"/><label class="radio-inline" for="test317"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test318" name="optradio"/><label class="radio-inline" for="test318"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test319" name="optradio"/><label class="radio-inline" for="test319"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Friday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab21">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test320" name="optradio"/><label class="radio-inline" for="test320"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test321" name="optradio"/><label class="radio-inline" for="test321"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test322" name="optradio"/><label class="radio-inline" for="test322"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test323" name="optradio"/><label class="radio-inline" for="test323"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test324" name="optradio"/><label class="radio-inline" for="test324"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test325" name="optradio"/><label class="radio-inline" for="test325"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test326" name="optradio"/><label class="radio-inline" for="test326"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test327" name="optradio"/><label class="radio-inline" for="test327"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test328" name="optradio"/><label class="radio-inline" for="test328"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test329" name="optradio"/><label class="radio-inline" for="test329"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test330" name="optradio"/><label class="radio-inline" for="test330"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test331" name="optradio"/><label class="radio-inline" for="test331"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test332" name="optradio"/><label class="radio-inline" for="test332"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test333" name="optradio"/><label class="radio-inline" for="test333"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test334" name="optradio"/><label class="radio-inline" for="test334"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test335" name="optradio"/><label class="radio-inline" for="test335"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Saturday</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-4 box-shadow theater-4">
+        <h2><span class="theater_4_name"></span></h2>
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab22" data-toggle="tab">Sunday</a></li>
+            <li><a href="#tab23" data-toggle="tab">Monday</a></li>
+            <li><a href="#tab24" data-toggle="tab">Tuesday</a></li>
+            <li><a href="#tab25" data-toggle="tab">Wednesday</a></li>
+            <li><a href="#tab26" data-toggle="tab">Thursday</a></li>
+            <li><a href="#tab27" data-toggle="tab">Friday</a></li>
+            <li><a href="#tab28" data-toggle="tab">Saturday</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab fade active" id="tab22">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test336" name="optradio"/><label class="radio-inline" for="test336"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test337" name="optradio"/><label class="radio-inline" for="test337"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test338" name="optradio"/><label class="radio-inline" for="test338"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test339" name="optradio"/><label class="radio-inline" for="test339"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test340" name="optradio"/><label class="radio-inline" for="test340"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test341" name="optradio"/><label class="radio-inline" for="test341"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test342" name="optradio"/><label class="radio-inline" for="test342"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test343" name="optradio"/><label class="radio-inline" for="test343"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test344" name="optradio"/><label class="radio-inline" for="test344"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test345" name="optradio"/><label class="radio-inline" for="test345"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test346" name="optradio"/><label class="radio-inline" for="test346"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test347" name="optradio"/><label class="radio-inline" for="test347"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test348" name="optradio"/><label class="radio-inline" for="test348"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test349" name="optradio"/><label class="radio-inline" for="test349"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test350" name="optradio"/><label class="radio-inline" for="test350"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test351" name="optradio"/><label class="radio-inline" for="test351"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Sunday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab23">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test352" name="optradio"/><label class="radio-inline" for="test352"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test353" name="optradio"/><label class="radio-inline" for="test353"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test354" name="optradio"/><label class="radio-inline" for="test354"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test355" name="optradio"/><label class="radio-inline" for="test355"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test356" name="optradio"/><label class="radio-inline" for="test356"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test357" name="optradio"/><label class="radio-inline" for="test357"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test358" name="optradio"/><label class="radio-inline" for="test358"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test359" name="optradio"/><label class="radio-inline" for="test359"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test360" name="optradio"/><label class="radio-inline" for="test360"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test361" name="optradio"/><label class="radio-inline" for="test361"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test362" name="optradio"/><label class="radio-inline" for="test362"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test363" name="optradio"/><label class="radio-inline" for="test363"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test364" name="optradio"/><label class="radio-inline" for="test364"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test365" name="optradio"/><label class="radio-inline" for="test365"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test366" name="optradio"/><label class="radio-inline" for="test366"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test367" name="optradio"/><label class="radio-inline" for="test367"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Monday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab24">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test368" name="optradio"/><label class="radio-inline" for="test368"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test369" name="optradio"/><label class="radio-inline" for="test369"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test370" name="optradio"/><label class="radio-inline" for="test370"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test371" name="optradio"/><label class="radio-inline" for="test371"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test372" name="optradio"/><label class="radio-inline" for="test372"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test373" name="optradio"/><label class="radio-inline" for="test373"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test374" name="optradio"/><label class="radio-inline" for="test374"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test375" name="optradio"/><label class="radio-inline" for="test375"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test376" name="optradio"/><label class="radio-inline" for="test376"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test377" name="optradio"/><label class="radio-inline" for="test377"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test378" name="optradio"/><label class="radio-inline" for="test378"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test379" name="optradio"/><label class="radio-inline" for="test379"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test380" name="optradio"/><label class="radio-inline" for="test380"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test381" name="optradio"/><label class="radio-inline" for="test381"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test382" name="optradio"/><label class="radio-inline" for="test382"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test383" name="optradio"/><label class="radio-inline" for="test383"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Tuesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab25">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test384" name="optradio"/><label class="radio-inline" for="test384"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test385" name="optradio"/><label class="radio-inline" for="test385"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test386" name="optradio"/><label class="radio-inline" for="test386"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test387" name="optradio"/><label class="radio-inline" for="test387"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test388" name="optradio"/><label class="radio-inline" for="test388"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test389" name="optradio"/><label class="radio-inline" for="test389"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test390" name="optradio"/><label class="radio-inline" for="test390"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test391" name="optradio"/><label class="radio-inline" for="test391"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test392" name="optradio"/><label class="radio-inline" for="test392"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test393" name="optradio"/><label class="radio-inline" for="test393"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test394" name="optradio"/><label class="radio-inline" for="test394"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test395" name="optradio"/><label class="radio-inline" for="test395"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test396" name="optradio"/><label class="radio-inline" for="test396"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test397" name="optradio"/><label class="radio-inline" for="test397"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test398" name="optradio"/><label class="radio-inline" for="test398"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test399" name="optradio"/><label class="radio-inline" for="test399"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Wednesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab26">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test400" name="optradio"/><label class="radio-inline" for="test400"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test401" name="optradio"/><label class="radio-inline" for="test401"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test402" name="optradio"/><label class="radio-inline" for="test402"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test403" name="optradio"/><label class="radio-inline" for="test403"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test404" name="optradio"/><label class="radio-inline" for="test404"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test405" name="optradio"/><label class="radio-inline" for="test405"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test406" name="optradio"/><label class="radio-inline" for="test406"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test407" name="optradio"/><label class="radio-inline" for="test407"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test408" name="optradio"/><label class="radio-inline" for="test408"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test409" name="optradio"/><label class="radio-inline" for="test409"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test410" name="optradio"/><label class="radio-inline" for="test410"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test411" name="optradio"/><label class="radio-inline" for="test411"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test412" name="optradio"/><label class="radio-inline" for="test412"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test413" name="optradio"/><label class="radio-inline" for="test413"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test414" name="optradio"/><label class="radio-inline" for="test414"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test415" name="optradio"/><label class="radio-inline" for="test415"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Thursday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab27">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test416" name="optradio"/><label class="radio-inline" for="test416"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test417" name="optradio"/><label class="radio-inline" for="test417"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test418" name="optradio"/><label class="radio-inline" for="test418"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test419" name="optradio"/><label class="radio-inline" for="test419"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test420" name="optradio"/><label class="radio-inline" for="test420"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test421" name="optradio"/><label class="radio-inline" for="test421"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test422" name="optradio"/><label class="radio-inline" for="test422"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test423" name="optradio"/><label class="radio-inline" for="test423"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test424" name="optradio"/><label class="radio-inline" for="test424"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test425" name="optradio"/><label class="radio-inline" for="test425"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test426" name="optradio"/><label class="radio-inline" for="test426"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test427" name="optradio"/><label class="radio-inline" for="test427"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test428" name="optradio"/><label class="radio-inline" for="test428"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test429" name="optradio"/><label class="radio-inline" for="test429"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test430" name="optradio"/><label class="radio-inline" for="test430"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test431" name="optradio"/><label class="radio-inline" for="test431"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Friday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab28">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test432" name="optradio"/><label class="radio-inline" for="test432"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test433" name="optradio"/><label class="radio-inline" for="test433"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test434" name="optradio"/><label class="radio-inline" for="test434"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test435" name="optradio"/><label class="radio-inline" for="test435"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test436" name="optradio"/><label class="radio-inline" for="test436"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test437" name="optradio"/><label class="radio-inline" for="test437"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test438" name="optradio"/><label class="radio-inline" for="test438"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test439" name="optradio"/><label class="radio-inline" for="test439"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test440" name="optradio"/><label class="radio-inline" for="test440"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test441" name="optradio"/><label class="radio-inline" for="test441"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test442" name="optradio"/><label class="radio-inline" for="test442"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test443" name="optradio"/><label class="radio-inline" for="test443"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test444" name="optradio"/><label class="radio-inline" for="test444"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test445" name="optradio"/><label class="radio-inline" for="test445"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test446" name="optradio"/><label class="radio-inline" for="test446"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test447" name="optradio"/><label class="radio-inline" for="test447"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Saturday</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-4 box-shadow theater-5">
+        <h2><span class="theater_5_name"></span></h2>
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab29" data-toggle="tab">Sunday</a></li>
+            <li><a href="#tab30" data-toggle="tab">Monday</a></li>
+            <li><a href="#tab31" data-toggle="tab">Tuesday</a></li>
+            <li><a href="#tab32" data-toggle="tab">Wednesday</a></li>
+            <li><a href="#tab33" data-toggle="tab">Thursday</a></li>
+            <li><a href="#tab34" data-toggle="tab">Friday</a></li>
+            <li><a href="#tab35" data-toggle="tab">Saturday</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab fade active" id="tab29">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test448" name="optradio"/><label class="radio-inline" for="test448"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test449" name="optradio"/><label class="radio-inline" for="test449"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test450" name="optradio"/><label class="radio-inline" for="test450"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test451" name="optradio"/><label class="radio-inline" for="test451"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test452" name="optradio"/><label class="radio-inline" for="test452"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test453" name="optradio"/><label class="radio-inline" for="test453"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test454" name="optradio"/><label class="radio-inline" for="test454"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test455" name="optradio"/><label class="radio-inline" for="test455"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test456" name="optradio"/><label class="radio-inline" for="test456"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test457" name="optradio"/><label class="radio-inline" for="test457"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test458" name="optradio"/><label class="radio-inline" for="test458"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test459" name="optradio"/><label class="radio-inline" for="test459"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test460" name="optradio"/><label class="radio-inline" for="test460"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test461" name="optradio"/><label class="radio-inline" for="test461"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test462" name="optradio"/><label class="radio-inline" for="test462"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test463" name="optradio"/><label class="radio-inline" for="test463"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Sunday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab30">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test464" name="optradio"/><label class="radio-inline" for="test464"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test465" name="optradio"/><label class="radio-inline" for="test465"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test466" name="optradio"/><label class="radio-inline" for="test466"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test467" name="optradio"/><label class="radio-inline" for="test467"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test468" name="optradio"/><label class="radio-inline" for="test468"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test469" name="optradio"/><label class="radio-inline" for="test469"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test470" name="optradio"/><label class="radio-inline" for="test470"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test471" name="optradio"/><label class="radio-inline" for="test471"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test472" name="optradio"/><label class="radio-inline" for="test472"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test473" name="optradio"/><label class="radio-inline" for="test473"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test474" name="optradio"/><label class="radio-inline" for="test474"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test475" name="optradio"/><label class="radio-inline" for="test475"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test476" name="optradio"/><label class="radio-inline" for="test476"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test477" name="optradio"/><label class="radio-inline" for="test477"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test478" name="optradio"/><label class="radio-inline" for="test478"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test479" name="optradio"/><label class="radio-inline" for="test479"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Monday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab31">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test480" name="optradio"/><label class="radio-inline" for="test480"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test481" name="optradio"/><label class="radio-inline" for="test481"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test482" name="optradio"/><label class="radio-inline" for="test482"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test483" name="optradio"/><label class="radio-inline" for="test483"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test484" name="optradio"/><label class="radio-inline" for="test484"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test485" name="optradio"/><label class="radio-inline" for="test485"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test486" name="optradio"/><label class="radio-inline" for="test486"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test487" name="optradio"/><label class="radio-inline" for="test487"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test488" name="optradio"/><label class="radio-inline" for="test488"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test489" name="optradio"/><label class="radio-inline" for="test489"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test490" name="optradio"/><label class="radio-inline" for="test490"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test491" name="optradio"/><label class="radio-inline" for="test491"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test492" name="optradio"/><label class="radio-inline" for="test492"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test493" name="optradio"/><label class="radio-inline" for="test493"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test494" name="optradio"/><label class="radio-inline" for="test494"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test495" name="optradio"/><label class="radio-inline" for="test495"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Tuesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab32">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test496" name="optradio"/><label class="radio-inline" for="test496"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test497" name="optradio"/><label class="radio-inline" for="test497"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test498" name="optradio"/><label class="radio-inline" for="test498"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test499" name="optradio"/><label class="radio-inline" for="test499"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test500" name="optradio"/><label class="radio-inline" for="test500"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test501" name="optradio"/><label class="radio-inline" for="test501"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test502" name="optradio"/><label class="radio-inline" for="test502"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test503" name="optradio"/><label class="radio-inline" for="test503"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test504" name="optradio"/><label class="radio-inline" for="test504"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test505" name="optradio"/><label class="radio-inline" for="test505"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test506" name="optradio"/><label class="radio-inline" for="test506"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test507" name="optradio"/><label class="radio-inline" for="test507"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test508" name="optradio"/><label class="radio-inline" for="test508"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test509" name="optradio"/><label class="radio-inline" for="test509"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test510" name="optradio"/><label class="radio-inline" for="test510"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test511" name="optradio"/><label class="radio-inline" for="test511"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Wednesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab33">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test512" name="optradio"/><label class="radio-inline" for="test512"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test513" name="optradio"/><label class="radio-inline" for="test513"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test514" name="optradio"/><label class="radio-inline" for="test514"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test515" name="optradio"/><label class="radio-inline" for="test515"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test516" name="optradio"/><label class="radio-inline" for="test516"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test517" name="optradio"/><label class="radio-inline" for="test517"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test518" name="optradio"/><label class="radio-inline" for="test518"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test519" name="optradio"/><label class="radio-inline" for="test519"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test520" name="optradio"/><label class="radio-inline" for="test520"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test521" name="optradio"/><label class="radio-inline" for="test521"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test522" name="optradio"/><label class="radio-inline" for="test522"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test523" name="optradio"/><label class="radio-inline" for="test523"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test524" name="optradio"/><label class="radio-inline" for="test524"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test525" name="optradio"/><label class="radio-inline" for="test525"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test526" name="optradio"/><label class="radio-inline" for="test526"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test527" name="optradio"/><label class="radio-inline" for="test527"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Thursday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab34">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test528" name="optradio"/><label class="radio-inline" for="test528"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test529" name="optradio"/><label class="radio-inline" for="test529"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test530" name="optradio"/><label class="radio-inline" for="test530"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test531" name="optradio"/><label class="radio-inline" for="test531"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test532" name="optradio"/><label class="radio-inline" for="test532"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test533" name="optradio"/><label class="radio-inline" for="test533"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test534" name="optradio"/><label class="radio-inline" for="test534"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test535" name="optradio"/><label class="radio-inline" for="test535"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test536" name="optradio"/><label class="radio-inline" for="test536"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test537" name="optradio"/><label class="radio-inline" for="test537"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test538" name="optradio"/><label class="radio-inline" for="test538"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test539" name="optradio"/><label class="radio-inline" for="test539"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test540" name="optradio"/><label class="radio-inline" for="test540"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test541" name="optradio"/><label class="radio-inline" for="test541"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test542" name="optradio"/><label class="radio-inline" for="test542"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test543" name="optradio"/><label class="radio-inline" for="test543"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Friday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab35">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test544" name="optradio"/><label class="radio-inline" for="test544"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test545" name="optradio"/><label class="radio-inline" for="test545"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test546" name="optradio"/><label class="radio-inline" for="test546"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test547" name="optradio"/><label class="radio-inline" for="test547"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test548" name="optradio"/><label class="radio-inline" for="test548"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test549" name="optradio"/><label class="radio-inline" for="test549"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test550" name="optradio"/><label class="radio-inline" for="test550"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test551" name="optradio"/><label class="radio-inline" for="test551"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test552" name="optradio"/><label class="radio-inline" for="test552"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test553" name="optradio"/><label class="radio-inline" for="test553"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test554" name="optradio"/><label class="radio-inline" for="test554"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test555" name="optradio"/><label class="radio-inline" for="test555"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test556" name="optradio"/><label class="radio-inline" for="test556"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test557" name="optradio"/><label class="radio-inline" for="test557"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test558" name="optradio"/><label class="radio-inline" for="test558"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test559" name="optradio"/><label class="radio-inline" for="test559"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Saturday</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-4 box-shadow theater-6">
+        <h2><span class="theater_6_name"></span></h2>
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab36" data-toggle="tab">Sunday</a></li>
+            <li><a href="#tab37" data-toggle="tab">Monday</a></li>
+            <li><a href="#tab38" data-toggle="tab">Tuesday</a></li>
+            <li><a href="#tab39" data-toggle="tab">Wednesday</a></li>
+            <li><a href="#tab40" data-toggle="tab">Thursday</a></li>
+            <li><a href="#tab41" data-toggle="tab">Friday</a></li>
+            <li><a href="#tab42" data-toggle="tab">Saturday</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab fade active" id="tab36">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test560" name="optradio"/><label class="radio-inline" for="test560"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test561" name="optradio"/><label class="radio-inline" for="test561"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test562" name="optradio"/><label class="radio-inline" for="test562"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test563" name="optradio"/><label class="radio-inline" for="test563"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test564" name="optradio"/><label class="radio-inline" for="test564"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test565" name="optradio"/><label class="radio-inline" for="test565"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test566" name="optradio"/><label class="radio-inline" for="test566"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test567" name="optradio"/><label class="radio-inline" for="test567"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test568" name="optradio"/><label class="radio-inline" for="test568"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test569" name="optradio"/><label class="radio-inline" for="test569"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test570" name="optradio"/><label class="radio-inline" for="test570"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test571" name="optradio"/><label class="radio-inline" for="test571"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test572" name="optradio"/><label class="radio-inline" for="test572"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test573" name="optradio"/><label class="radio-inline" for="test573"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test574" name="optradio"/><label class="radio-inline" for="test574"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test575" name="optradio"/><label class="radio-inline" for="test575"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Sunday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab37">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test576" name="optradio"/><label class="radio-inline" for="test576"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test577" name="optradio"/><label class="radio-inline" for="test577"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test578" name="optradio"/><label class="radio-inline" for="test578"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test579" name="optradio"/><label class="radio-inline" for="test579"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test580" name="optradio"/><label class="radio-inline" for="test580"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test581" name="optradio"/><label class="radio-inline" for="test581"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test582" name="optradio"/><label class="radio-inline" for="test582"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test583" name="optradio"/><label class="radio-inline" for="test583"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test584" name="optradio"/><label class="radio-inline" for="test584"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test585" name="optradio"/><label class="radio-inline" for="test585"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test586" name="optradio"/><label class="radio-inline" for="test586"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test587" name="optradio"/><label class="radio-inline" for="test587"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test588" name="optradio"/><label class="radio-inline" for="test588"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test589" name="optradio"/><label class="radio-inline" for="test589"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test590" name="optradio"/><label class="radio-inline" for="test590"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test591" name="optradio"/><label class="radio-inline" for="test591"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Monday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab38">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test592" name="optradio"/><label class="radio-inline" for="test592"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test593" name="optradio"/><label class="radio-inline" for="test593"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test594" name="optradio"/><label class="radio-inline" for="test594"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test595" name="optradio"/><label class="radio-inline" for="test595"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test596" name="optradio"/><label class="radio-inline" for="test596"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test597" name="optradio"/><label class="radio-inline" for="test597"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test598" name="optradio"/><label class="radio-inline" for="test598"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test599" name="optradio"/><label class="radio-inline" for="test599"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test600" name="optradio"/><label class="radio-inline" for="test600"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test601" name="optradio"/><label class="radio-inline" for="test601"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test602" name="optradio"/><label class="radio-inline" for="test602"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test603" name="optradio"/><label class="radio-inline" for="test603"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test604" name="optradio"/><label class="radio-inline" for="test604"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test605" name="optradio"/><label class="radio-inline" for="test605"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test606" name="optradio"/><label class="radio-inline" for="test606"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test607" name="optradio"/><label class="radio-inline" for="test607"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Tuesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab39">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test608" name="optradio"/><label class="radio-inline" for="test608"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test609" name="optradio"/><label class="radio-inline" for="test609"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test610" name="optradio"/><label class="radio-inline" for="test610"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test611" name="optradio"/><label class="radio-inline" for="test611"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test612" name="optradio"/><label class="radio-inline" for="test612"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test613" name="optradio"/><label class="radio-inline" for="test613"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test614" name="optradio"/><label class="radio-inline" for="test614"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test615" name="optradio"/><label class="radio-inline" for="test615"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test616" name="optradio"/><label class="radio-inline" for="test616"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test617" name="optradio"/><label class="radio-inline" for="test617"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test618" name="optradio"/><label class="radio-inline" for="test618"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test619" name="optradio"/><label class="radio-inline" for="test619"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test620" name="optradio"/><label class="radio-inline" for="test620"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test621" name="optradio"/><label class="radio-inline" for="test621"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test622" name="optradio"/><label class="radio-inline" for="test622"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test623" name="optradio"/><label class="radio-inline" for="test623"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Wednesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab40">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test624" name="optradio"/><label class="radio-inline" for="test624"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test625" name="optradio"/><label class="radio-inline" for="test625"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test626" name="optradio"/><label class="radio-inline" for="test626"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test627" name="optradio"/><label class="radio-inline" for="test627"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test628" name="optradio"/><label class="radio-inline" for="test628"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test629" name="optradio"/><label class="radio-inline" for="test629"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test630" name="optradio"/><label class="radio-inline" for="test630"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test631" name="optradio"/><label class="radio-inline" for="test631"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test632" name="optradio"/><label class="radio-inline" for="test632"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test633" name="optradio"/><label class="radio-inline" for="test633"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test634" name="optradio"/><label class="radio-inline" for="test634"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test635" name="optradio"/><label class="radio-inline" for="test635"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test636" name="optradio"/><label class="radio-inline" for="test636"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test637" name="optradio"/><label class="radio-inline" for="test637"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test638" name="optradio"/><label class="radio-inline" for="test638"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test639" name="optradio"/><label class="radio-inline" for="test639"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Thursday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab41">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test640" name="optradio"/><label class="radio-inline" for="test640"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test641" name="optradio"/><label class="radio-inline" for="test641"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test642" name="optradio"/><label class="radio-inline" for="test642"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test643" name="optradio"/><label class="radio-inline" for="test643"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test644" name="optradio"/><label class="radio-inline" for="test644"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test645" name="optradio"/><label class="radio-inline" for="test645"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test646" name="optradio"/><label class="radio-inline" for="test646"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test647" name="optradio"/><label class="radio-inline" for="test647"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test648" name="optradio"/><label class="radio-inline" for="test648"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test649" name="optradio"/><label class="radio-inline" for="test649"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test650" name="optradio"/><label class="radio-inline" for="test650"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test651" name="optradio"/><label class="radio-inline" for="test651"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test652" name="optradio"/><label class="radio-inline" for="test652"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test653" name="optradio"/><label class="radio-inline" for="test653"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test654" name="optradio"/><label class="radio-inline" for="test654"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test655" name="optradio"/><label class="radio-inline" for="test655"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Friday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab42">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test656" name="optradio"/><label class="radio-inline" for="test656"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test657" name="optradio"/><label class="radio-inline" for="test657"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test658" name="optradio"/><label class="radio-inline" for="test658"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test659" name="optradio"/><label class="radio-inline" for="test659"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test660" name="optradio"/><label class="radio-inline" for="test660"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test661" name="optradio"/><label class="radio-inline" for="test661"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test662" name="optradio"/><label class="radio-inline" for="test662"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test663" name="optradio"/><label class="radio-inline" for="test663"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test664" name="optradio"/><label class="radio-inline" for="test664"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test665" name="optradio"/><label class="radio-inline" for="test665"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test666" name="optradio"/><label class="radio-inline" for="test666"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test667" name="optradio"/><label class="radio-inline" for="test667"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test668" name="optradio"/><label class="radio-inline" for="test668"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test669" name="optradio"/><label class="radio-inline" for="test669"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test670" name="optradio"/><label class="radio-inline" for="test670"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test671" name="optradio"/><label class="radio-inline" for="test671"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Saturday</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-4 box-shadow theater-7">
+        <h2><span class="theater_7_name"></span></h2>
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab43" data-toggle="tab">Sunday</a></li>
+            <li><a href="#tab44" data-toggle="tab">Monday</a></li>
+            <li><a href="#tab45" data-toggle="tab">Tuesday</a></li>
+            <li><a href="#tab46" data-toggle="tab">Wednesday</a></li>
+            <li><a href="#tab47" data-toggle="tab">Thursday</a></li>
+            <li><a href="#tab48" data-toggle="tab">Friday</a></li>
+            <li><a href="#tab49" data-toggle="tab">Saturday</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab fade active" id="tab43">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test672" name="optradio"/><label class="radio-inline" for="test672"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test673" name="optradio"/><label class="radio-inline" for="test673"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test674" name="optradio"/><label class="radio-inline" for="test674"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test675" name="optradio"/><label class="radio-inline" for="test675"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test676" name="optradio"/><label class="radio-inline" for="test676"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test677" name="optradio"/><label class="radio-inline" for="test677"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test678" name="optradio"/><label class="radio-inline" for="test678"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test679" name="optradio"/><label class="radio-inline" for="test679"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test680" name="optradio"/><label class="radio-inline" for="test680"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test681" name="optradio"/><label class="radio-inline" for="test681"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test682" name="optradio"/><label class="radio-inline" for="test682"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test683" name="optradio"/><label class="radio-inline" for="test683"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test684" name="optradio"/><label class="radio-inline" for="test684"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test685" name="optradio"/><label class="radio-inline" for="test685"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test686" name="optradio"/><label class="radio-inline" for="test686"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test687" name="optradio"/><label class="radio-inline" for="test687"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Sunday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab44">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test688" name="optradio"/><label class="radio-inline" for="test688"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test689" name="optradio"/><label class="radio-inline" for="test689"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test690" name="optradio"/><label class="radio-inline" for="test690"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test691" name="optradio"/><label class="radio-inline" for="test691"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test692" name="optradio"/><label class="radio-inline" for="test692"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test693" name="optradio"/><label class="radio-inline" for="test693"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test694" name="optradio"/><label class="radio-inline" for="test694"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test695" name="optradio"/><label class="radio-inline" for="test695"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test696" name="optradio"/><label class="radio-inline" for="test696"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test697" name="optradio"/><label class="radio-inline" for="test697"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test698" name="optradio"/><label class="radio-inline" for="test698"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test699" name="optradio"/><label class="radio-inline" for="test699"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test700" name="optradio"/><label class="radio-inline" for="test700"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test701" name="optradio"/><label class="radio-inline" for="test701"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test702" name="optradio"/><label class="radio-inline" for="test702"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test703" name="optradio"/><label class="radio-inline" for="test703"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Monday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab45">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test704" name="optradio"/><label class="radio-inline" for="test704"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test705" name="optradio"/><label class="radio-inline" for="test705"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test706" name="optradio"/><label class="radio-inline" for="test706"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test707" name="optradio"/><label class="radio-inline" for="test707"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test708" name="optradio"/><label class="radio-inline" for="test708"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test709" name="optradio"/><label class="radio-inline" for="test709"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test710" name="optradio"/><label class="radio-inline" for="test710"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test711" name="optradio"/><label class="radio-inline" for="test711"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test712" name="optradio"/><label class="radio-inline" for="test712"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test713" name="optradio"/><label class="radio-inline" for="test713"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test714" name="optradio"/><label class="radio-inline" for="test714"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test715" name="optradio"/><label class="radio-inline" for="test715"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test716" name="optradio"/><label class="radio-inline" for="test716"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test717" name="optradio"/><label class="radio-inline" for="test717"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test718" name="optradio"/><label class="radio-inline" for="test718"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test719" name="optradio"/><label class="radio-inline" for="test719"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Tuesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab46">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test720" name="optradio"/><label class="radio-inline" for="test720"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test721" name="optradio"/><label class="radio-inline" for="test721"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test722" name="optradio"/><label class="radio-inline" for="test722"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test723" name="optradio"/><label class="radio-inline" for="test723"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test724" name="optradio"/><label class="radio-inline" for="test724"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test725" name="optradio"/><label class="radio-inline" for="test725"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test726" name="optradio"/><label class="radio-inline" for="test726"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test727" name="optradio"/><label class="radio-inline" for="test727"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test728" name="optradio"/><label class="radio-inline" for="test728"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test729" name="optradio"/><label class="radio-inline" for="test729"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test730" name="optradio"/><label class="radio-inline" for="test730"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test731" name="optradio"/><label class="radio-inline" for="test731"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test732" name="optradio"/><label class="radio-inline" for="test732"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test733" name="optradio"/><label class="radio-inline" for="test733"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test734" name="optradio"/><label class="radio-inline" for="test734"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test735" name="optradio"/><label class="radio-inline" for="test735"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Wednesday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab47">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test736" name="optradio"/><label class="radio-inline" for="test736"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test737" name="optradio"/><label class="radio-inline" for="test737"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test738" name="optradio"/><label class="radio-inline" for="test738"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test739" name="optradio"/><label class="radio-inline" for="test739"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test740" name="optradio"/><label class="radio-inline" for="test740"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test741" name="optradio"/><label class="radio-inline" for="test741"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test742" name="optradio"/><label class="radio-inline" for="test742"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test743" name="optradio"/><label class="radio-inline" for="test743"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test744" name="optradio"/><label class="radio-inline" for="test744"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test745" name="optradio"/><label class="radio-inline" for="test745"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test746" name="optradio"/><label class="radio-inline" for="test746"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test747" name="optradio"/><label class="radio-inline" for="test747"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test748" name="optradio"/><label class="radio-inline" for="test748"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test749" name="optradio"/><label class="radio-inline" for="test749"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test750" name="optradio"/><label class="radio-inline" for="test750"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test751" name="optradio"/><label class="radio-inline" for="test751"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Thursday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab48">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test752" name="optradio"/><label class="radio-inline" for="test752"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test753" name="optradio"/><label class="radio-inline" for="test753"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test754" name="optradio"/><label class="radio-inline" for="test754"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test755" name="optradio"/><label class="radio-inline" for="test755"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test756" name="optradio"/><label class="radio-inline" for="test756"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test757" name="optradio"/><label class="radio-inline" for="test757"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test758" name="optradio"/><label class="radio-inline" for="test758"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test759" name="optradio"/><label class="radio-inline" for="test759"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test760" name="optradio"/><label class="radio-inline" for="test760"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test761" name="optradio"/><label class="radio-inline" for="test761"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test762" name="optradio"/><label class="radio-inline" for="test762"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test763" name="optradio"/><label class="radio-inline" for="test763"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test764" name="optradio"/><label class="radio-inline" for="test764"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test765" name="optradio"/><label class="radio-inline" for="test765"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test766" name="optradio"/><label class="radio-inline" for="test766"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test767" name="optradio"/><label class="radio-inline" for="test767"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Friday</h2>
+                </div>
+              </div>
+            </div>
+            <div class="tab fade" id="tab49">
+              <div class="row">
+                <div class="col-10">
+                  <ul class="Times-1">
+                    <li class="Times-1-1"><input type="radio" for="test768" name="optradio"/><label class="radio-inline" for="test768"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test769" name="optradio"/><label class="radio-inline" for="test769"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test770" name="optradio"/><label class="radio-inline" for="test770"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test771" name="optradio"/><label class="radio-inline" for="test771"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test772" name="optradio"/><label class="radio-inline" for="test772"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test773" name="optradio"/><label class="radio-inline" for="test773"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test774" name="optradio"/><label class="radio-inline" for="test774"></label></li>
+                    <li class="Times-1-1"><input type="radio" for="test775" name="optradio"/><label class="radio-inline" for="test775"></label></li>
+                  </ul>
+                  <ul class="Times-1-2">
+                    <li class="Times-1-2-1"><input type="radio" for="test776" name="optradio"/><label class="radio-inline" for="test776"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test777" name="optradio"/><label class="radio-inline" for="test777"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test778" name="optradio"/><label class="radio-inline" for="test778"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test779" name="optradio"/><label class="radio-inline" for="test779"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test780" name="optradio"/><label class="radio-inline" for="test780"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test781" name="optradio"/><label class="radio-inline" for="test781"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test782" name="optradio"/><label class="radio-inline" for="test782"></label></li>
+                    <li class="Times-1-2-1"><input type="radio" for="test783" name="optradio"/><label class="radio-inline" for="test783"></label></li>
+                  </ul>
+                </div>
+                <div class="col-2">
+                  <h2>Saturday</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="align-items-center">
+          <button class="btn btn-success btn-lg btn-md submit_btn cutomize_submit_btn checkout" type="submit" id="checkout">Proceed To Checkout</button>
+        </div>
+      </div>
+
+    <!--Footer-->
+    <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+
+        <!--Footer Links-->
+        <div class="container text-center text-md-left">
+            <div class="row">
+
+                <!--First column-->
+                <div class="col-md-4">
+                    <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Footer Content</h5>
+                    <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
+                        amet, consectetur adipisicing elit.</p>
+                </div>
+                <!--/.First column-->
+
+                <hr class="clearfix w-100 d-md-none">
+                <hr class="clearfix w-100 d-md-none">
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-2">
+
+                </div>
+                <!--Fourth column-->
+                <div class="col-md-2 mx-auto">
+                    <h5 class="text-uppercase mb-4 mt-3 font-weight-bold ">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!">Movie</a></li>
+                        <li><a href="./checkout.html">Checkout</a></li>
+                        <li><a href="#!">About</a></li>
+                        <!-- <li><a href="#!"></a></li> -->
+                    </ul>
+                </div>
+                <!--/.Fourth column-->
+
+                <div class="col-md-4 text-center py-3">
+                    <ul class="list-unstyled list-inline mb-0">
+                        <li class="list-inline-item">
+                            <h5 class="mb-1">Register for free</h5>
+                        </li>
+                        <li class="list-inline-item"><a href="#!" class="btn btn-danger btn-rounded">Sign up!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!--Social buttons-->
+        <div class="text-center">
+            <ul class="list-unstyled list-inline">
+                <li class="list-inline-item"><a class="btn-floating btn-sm btn-fb mx-1"><i class="fa fa-facebook"> </i></a></li>
+                <li class="list-inline-item"><a class="btn-floating btn-sm btn-tw mx-1"><i class="fa fa-twitter"> </i></a></li>
+                <li class="list-inline-item"><a class="btn-floating btn-sm btn-gplus mx-1"><i class="fa fa-google-plus"> </i></a></li>
+                <li class="list-inline-item"><a class="btn-floating btn-sm btn-li mx-1"><i class="fa fa-linkedin"> </i></a></li>
+                <li class="list-inline-item"><a class="btn-floating btn-sm btn-dribbble mx-1"><i class="fa fa-dribbble"> </i></a></li>
+            </ul>
+        </div>
+        <!--/.Social buttons-->
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3 text-center">
+            <div class="container-fluid">
+                © 2017 Copyright: <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
+
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/template.js"></script>
+    <script src="../js/See_Showtimes.js"></script>
+    <script src="js/See_Showtimes.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

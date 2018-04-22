@@ -71,3 +71,9 @@ Beta v1.9 - Kwok (April 18 at 6:52)
 	4. change with the allmovie.js which after the search bar send the search keyword to back-end, back-end will send a JSON object as a result
 	5. I also add a link in web.xml to link to the 404 page
 
+Beta v1.10 - Paul (April 22 at 3:57 pm)
+	1. Added See_Showtime.html    Note: Page should work flawlessly except that I haven't tested Cookies on it yet.
+	2. Added See_Showtime.css
+	3. Added See_Showtimes.js
+	4. Added About_Us.html        Note: Descriptions still needed for this page, and an image for Kwok
+	5. Added About_Us.css
