@@ -77,3 +77,7 @@ Beta v1.10 - Paul (April 22 at 3:57 pm)
 	3. Added See_Showtimes.js
 	4. Added About_Us.html        Note: Descriptions still needed for this page, and an image for Kwok
 	5. Added About_Us.css
+	
+Beta v1.11 - Kwok (April 22 at 6:12)
+	1. I made some change with the src folder
+	2. I made some change with index.html, ALlMovies.html, allMovies.js

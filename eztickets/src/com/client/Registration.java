@@ -6,13 +6,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.client.*;
 
 public class Registration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -22,8 +20,6 @@ public class Registration extends HttpServlet {
 	static Connection connection = null;
 	static String query = null;
 	Statement statement = null;
-	static Boolean same = false;
-
 	private String host;
 	private String port;
 	private String muser;
@@ -79,6 +75,7 @@ public class Registration extends HttpServlet {
 		String loginID = request.getParameter("loginID");
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
+		
 
 		// Check the database whether or not it has a same eamil with user's input email
 		try {
@@ -86,23 +83,25 @@ public class Registration extends HttpServlet {
 			String selectSQL = "SELECT * FROM infoTable";
 			Statement preparedStatement = connection.createStatement();
 			ResultSet rs = preparedStatement.executeQuery(selectSQL);
+			boolean same = false;
 
 			while (rs.next()) {
-				String temail = rs.getString("EMAIL");
 				// if there has a same email with user's input, set "same" to true, and break it
-				if ((temail.compareTo(email) == 0)) {
-					response.getWriter().println("300");
-					break;
-				}
-				else {
-					query = "INSERT INTO infoTable (FIRSTNAME, LASTNAME, LOGINID, PASSWORD, EMAIL) VALUES ('" + firstName
-							+ "','" + lastName + "','" + loginID + "','" + password + "','" + email + "');";
-					executeQuery(query);					
-					sendingEmail.messages(firstName,lastName, email, host, port, muser, pass);					
-					response.getWriter().println("400");
+				if (email.equalsIgnoreCase(rs.getString("EMAIL"))) {
+					response.getWriter().print("300");
+					same = true;
 					break;
 				}
 			}
+			if (same == false) 
+			{
+				query = "INSERT INTO infoTable (FIRSTNAME, LASTNAME, LOGINID, PASSWORD, EMAIL) VALUES ('" + firstName
+						+ "','" + lastName + "','" + loginID + "','" + password + "','" + email + "');";
+				executeQuery(query);					
+				response.getWriter().print("400");
+				sendingEmail.messages(firstName,lastName, email, host, port, muser, pass, email, 1);				
+			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

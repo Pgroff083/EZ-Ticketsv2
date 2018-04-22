@@ -1,22 +1,13 @@
 package com.database;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.nio.charset.Charset;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 import org.json.simple.*;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -58,8 +49,9 @@ public class ReadMoviesDB extends HttpServlet {
          System.out.println("Failed to make connection!");
       }
       try {
-    	  	//String action = request.getParameter("code");
-    	  	String action = "AllMovies999";
+    	    String action = request.getParameter("action");
+    	    System.out.println(action);
+    	  	//String action = "Blockers";
     	  	JSONObject json = new JSONObject();
     	  	String text;
     	  	
@@ -68,16 +60,18 @@ public class ReadMoviesDB extends HttpServlet {
     	  		String selectSQL = "SELECT * FROM Movies";
 				Statement preparedStatement = connection.createStatement();
 				ResultSet rs = preparedStatement.executeQuery(selectSQL);
-				
 				List<String> moviesList = new ArrayList<String>();				
-				
 				while (rs.next()) {
-					moviesList.add(rs.getString("JSON"));
+					if(rs.getString("MoviesName").contains("3D") || rs.getString("MoviesName").contains("2D")) 
+            		{
+            			
+            		}
+            		else
+            			moviesList.add(rs.getString("JSON"));
 				}
-				
 				json.put("results", moviesList);					
 				text = json.toJSONString();
-				response.getWriter().print((text.replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}")));						
+				response.getWriter().print((text.replace("\\\\\"", "\\\"").replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}")));						
     	  	}
     	  	else 
     	  	{
@@ -97,7 +91,6 @@ public class ReadMoviesDB extends HttpServlet {
 						break;
 					}
 				}
-				
     	  		for(int i = 1; i < 8; i++) 
     	  		{
     	  			selectSQL = "SELECT * FROM Main where MoviesID = " + MoviesID;
@@ -122,7 +115,6 @@ public class ReadMoviesDB extends HttpServlet {
     	  				}
     	  			}    	  			
     	  		}
-    	  		
     	  		json.put("Theaters", theaters);
     	  		JSONObject json2 = new JSONObject();
     	  		for(int j = 0; j < theatersID.size(); j++)
@@ -150,13 +142,10 @@ public class ReadMoviesDB extends HttpServlet {
     	  		text = json.toJSONString();    	  		
     	  		response.getWriter().print((text.replace("\\\"", "\"").replace("\"{", "{").replace("}\"", "}")));				
     	  	}
-    	  	
-         
       } catch (SQLException e) {
          e.printStackTrace();
       }
    }
-
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       doGet(request, response);
    }   

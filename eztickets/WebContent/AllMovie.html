@@ -10,7 +10,7 @@
 
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/graphics/freepik.jpg">
+    <link rel="icon" href="graphics/favicon.ico">
 
     <title>EZ-Tickets</title>
 
@@ -23,7 +23,6 @@
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="album.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/rating.css">
     <link rel="stylesheet" type="text/css" href="css/SimpleStarRating.css">
     <link rel="stylesheet" type="text/css" href="css/index_style.css">
@@ -48,7 +47,7 @@
             <a class="p-2 text-white dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 				<div class="wheredropdowis" align = "center"></div>
-                <a class="dropdown-item" href="AllMovie.html">Moive</a>
+                <a class="dropdown-item" href="#" onclick="onClickAll()">Moive</a>
                 <a class="dropdown-item" href="#">Tickets</a>
                 <a class="dropdown-item" href="AboutUs.html">About us</a>
                 <div class="logout_button"></div>
@@ -79,7 +78,6 @@
                           <a class="btn btn-outline-primary button_signup after-login-signupbtn" href="./other_page/Registration.html">Sign up</a>
                           <input class="btn btn-primary cutomize_sign_btn popup-login-btn" type="button" name="login" value="Login" href="index.html" data-dismiss="modal" id="btnSubmit" />
                             <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-
                             </div>
                         </form>
                       </div>
@@ -88,13 +86,6 @@
                 </div>
           </nav>
           <a class="btn btn-outline-primary button_signup after-login-signupbtn nav-login-button" href="./Registration.html">Sign up</a>
-
-              <img class="dropdown-toggle nav-profile-img" id="dropdownMenuButton-profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="graphics/cardimg.jpg" alt="no pic!">
-              <ul class="dropdown-menu" role="menu">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Ticktes</a></li>
-                <li><a class="dropdown-item" id="logout_button" href="#">Log out</a></li>
-              </ul>
             </div>
 
 <!-- ====================== Body ====================== -->
@@ -140,7 +131,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Get ticket</button>
+                <button type="button" class="btn btn-primary get-ticket">Get ticket</button>
               </div>
             </div>
           </div>
@@ -226,9 +217,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
     <script src="js/allmovie.js"></script>
     <script src="js/login.js"></script>
-    <script src="../../../../assets/js/vendor/holder.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </body>
 </html>
