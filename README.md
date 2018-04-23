@@ -81,3 +81,8 @@ Beta v1.10 - Paul (April 22 at 3:57 pm)
 Beta v1.11 - Kwok (April 22 at 6:12)
 	1. I made some change with the src folder
 	2. I made some change with index.html, ALlMovies.html, allMovies.js
+	
+Beta v1.12 - Kwok (April 23 at 5:53)
+	1. now allmovies page can link to the showtime page and pass value to it
+	2. clear some useless code in some html pages
+	3. I might do something wrong with the about_us page, so go to see it and fix it. Thanks.

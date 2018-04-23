@@ -96,7 +96,7 @@ footer backgroun-color: #626275;
 
 .nav-customized-font {
   /* font-family: 'Josefin Slab:100', serif; */
-   margin-right: 5px !important; 
+   margin-right: 5px !important;
 }
 
 .text-white {
@@ -150,4 +150,19 @@ footer backgroun-color: #626275;
   width: 100%;
   position: relative;
   bottom: 0;
+}
+
+
+.mavgroup {
+  right: 0 !important;
+  position: absolute !important;
+  /* float:right !important; */
+  margin-right: 20px;
+  top:8px;
+}
+
+.nav-profile-img {
+  /* right: 0 !important;
+  position: absolute !important; */
+  max-width: 40px;
 }

@@ -6,12 +6,11 @@ jQuery(document).ready(function() {
   $('.theater-5').hide();
   $('.theater-6').hide();
   $('.theater-7').hide();
+  
+  search(localStorage.getItem("ID"));
 
-  var pic = search(getID());
-  $('.poster').attr("src", pic);
-
-   var response = getData();
-   var input = JSON.parse(response);
+   //var response = getData();
+   var input = JSON.parse(localStorage.getItem("ShowTime"));
    var name = input.Movie;
    $('.movie_name').html(name);
 
@@ -136,27 +135,27 @@ jQuery(document).ready(function() {
 });
 
   function getData() {
-    var data = readCookie("ShowTime");
-    return data;
+	  var data = localStorage.getItem("ShowTime");	  
+	  $.get('readMoviesDB', {
+			action : data
+		}, function(responseText) {
+			console.log(responseText);
+			return responseText;
+			})	  
   }
 
-  function getID() {
-    var data2 = readCookie("ID");
-    return data2;
-  }
-
-  search function(id) {
+  function search(id) {
   	var settings = {
   	  "async": true,
   	  "crossDomain": true,
-  	  "url": "https://api.themoviedb.org/3/movie/"+id+"?language=en-US&api_key=f9e1f6d31bef16452f7887267033d960",
+  	  "url": "https://api.themoviedb.org/3/movie/" + id + "?language=en-US&api_key=f9e1f6d31bef16452f7887267033d960",
   	  "method": "GET",
   	  "headers": {},
   	  "data": "{}"
   	}
 
   	$.ajax(settings).done(function (response) {
-  	  var posterUrl = 'http://image.tmdb.org/t/p/w185/'+response.poster_path;
-  	  // append the image here
+  	  var pic = 'http://image.tmdb.org/t/p/w185/'+response.poster_path;
+  	  $('.poster').attr("src", pic);
   	});
   }

@@ -58,3 +58,17 @@
   box-shadow:2px 2px 8px Silver;
   max-height: 400px;
 }
+
+.mavgroup {
+  right: 0 !important;
+  position: absolute !important;
+  /* float:right !important; */
+  margin-right: 20px;
+  top:8px;
+}
+
+.nav-profile-img {
+  /* right: 0 !important;
+  position: absolute !important; */
+  max-width: 40px;
+}

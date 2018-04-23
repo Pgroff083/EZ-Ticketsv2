@@ -33,20 +33,20 @@ function renderImg(obj) {
             var d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
             var expires = "expires="+d.toUTCString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path = See_Showtimes.html";
 
         }
 
         $('.get-ticket').click(function(){
           var movieName = title;
           var movieID = id;
+          localStorage.setItem("ID",movieID);
           $.get('readMoviesDB', {
      				action : movieName
      			}, function(responseText) {
-            setCookie('ShowTime', responseText, 60);
-            setCookie('ID', movieID, 60);
-            window.location.assign("See_Showtimes.html");
-          })
+     				localStorage.setItem("ShowTime",responseText);
+     				window.location.assign("See_Showtimes.html");
+     				})
         })
 
 	      videoKey(id);

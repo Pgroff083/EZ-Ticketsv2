@@ -424,15 +424,6 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-
-
 /* ------------------------CSS Checkout Page------------------------*/
 
 .advertisement {
@@ -447,3 +438,17 @@ h1 {
 
 
 /* ------------------------CSS Checkout Page------------------------*/
+.mavgroup {
+  right: 0 !important;
+  position: absolute !important;
+  /* float:right !important; */
+  margin-right: 20px;
+  top:8px;
+}
+
+.nav-profile-img {
+  /* right: 0 !important;
+  position: absolute !important; */
+  max-width: 40px;
+}
+
