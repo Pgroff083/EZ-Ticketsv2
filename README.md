@@ -86,3 +86,7 @@ Beta v1.12 - Kwok (April 23 at 5:53)
 	1. now allmovies page can link to the showtime page and pass value to it
 	2. clear some useless code in some html pages
 	3. I might do something wrong with the about_us page, so go to see it and fix it. Thanks.
+
+Beta v1.13 - Paul (April 23 at 7:58pm)
+	1. Fixed the issues with the About_Us.html page and updated the descriptions to something brief.
+	Note: The See_Showtimes_Style.css file needs to be updated if we want to change the colors back to something white instead of the purple and yellow that gets ugly on the prjector.
